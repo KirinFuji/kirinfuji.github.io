@@ -4,7 +4,6 @@ date: 2018-08-21 17:00:00 -07:00
 categories:
 - Food
 author: Ted
-category: Food
 layout: post
 ---
 
