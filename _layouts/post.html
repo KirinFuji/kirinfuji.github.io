@@ -6,14 +6,18 @@ layout: default
 
 <p>
   {{ page.date | date_to_string }}
-  {% if author %}
+  {% if page.author %}
   {% assign author = site.authors | where: 'short_name', page.author | first %}
+  {% if author %}
     - <a href="{{ author.url }}">{{ author.name }}</a>
   {% endif %}
+  {% endif %}
   
-  {% if category %}
+  {% if page.category %}
   {% assign category = site.categories | where: 'short_name', page.category | first %}
+  {% if category %}
     - <a href="{{ category.url }}">{{ category.name }}</a>
+  {% endif %}
   {% endif %}
 </p>
 
