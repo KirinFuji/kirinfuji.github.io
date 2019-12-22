@@ -1,7 +1,7 @@
 ---
 title: Ted
 position: 0
-short_name: ted
+short_name: Ted
 name: Ted Doe
 ---
 

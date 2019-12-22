@@ -1,6 +1,6 @@
 ---
 title: blog.kfuji.net
-timezone: PST
+timezone: America/Los_Angeles
 collections:
   authors:
     title: Authors
