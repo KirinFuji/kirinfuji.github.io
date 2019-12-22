@@ -12,10 +12,10 @@ layout: post
 ---
 
 ### Managing firewalld
-`firewall-cmd --state`                 -- Display whether service is running
-`systemctl status firewalld`           -- Another command to display status of service
-`systemctl restart firewall-cmd`       -- To restart service
-`firewall-cmd --reload`                -- To reload the permanent rules without interrupting existing persistent connections
+`firewall-cmd --state`                 -- Display whether service is running  
+`systemctl status firewalld`           -- Another command to display status of service  
+`systemctl restart firewall-cmd`       -- To restart service  
+`firewall-cmd --reload`                -- To reload the permanent rules without interrupting existing persistent connections  
 
 ### To start/stop/status firewalld service
 `systemctl start firewalld.service`
