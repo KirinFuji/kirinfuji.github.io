@@ -22,6 +22,11 @@ defaults:
     layout: author
 - scope:
     path: ''
+    type: Categories2
+  values:
+    layout: category2
+- scope:
+    path: ''
     type: posts
   values:
     layout: post
