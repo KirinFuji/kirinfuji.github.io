@@ -1,11 +1,6 @@
 ---
 title: firewall-cmd cheatsheet
 date: 2019-12-01 00:00:00 Z
-categories:
-- security
-tags:
-- firewall-cmd
-- firewalld
 author: Ted
 category: Security
 layout: post

@@ -1,11 +1,6 @@
 ---
 title: GPG Detailed Explanation
 date: 2019-12-02 00:00:00 Z
-categories:
-- security
-tags:
-- gpg
-- pgp
 author: Ted
 category: Security
 layout: post
