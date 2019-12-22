@@ -1,6 +1,6 @@
 ---
 title: Kiwifruit
-date: 2018-08-22 00:00:00 Z
+date: 2018-08-21 17:00:00 -07:00
 layout: post
 author: Ted
 ---
