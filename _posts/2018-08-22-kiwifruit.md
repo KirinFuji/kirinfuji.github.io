@@ -1,9 +1,10 @@
 ---
 title: Kiwifruit
 date: 2018-08-21 17:00:00 -07:00
+categories:
+- Food
 layout: post
 author: Ted
-category: Food
 ---
 
 Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
