@@ -1,6 +1,5 @@
 ---
 title: Security
-position: 0
 short_name: Security
 name: Security
 ---

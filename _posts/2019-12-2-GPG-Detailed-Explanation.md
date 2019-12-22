@@ -1,6 +1,6 @@
 ---
 title: GPG Detailed Explanation
-date: 2018-08-21 00:00:00 Z
+date: 2019-12-2 00:00:00 Z
 layout: post
 author: Security
 ---

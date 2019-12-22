@@ -1,6 +1,6 @@
 ---
 title: firewall-cmd cheatsheet
-date: 2018-08-20 00:00:00 Z
+date: 2019-12-1 00:00:00 Z
 layout: post
 author: Security
 ---
