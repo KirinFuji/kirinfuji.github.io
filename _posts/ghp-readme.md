@@ -1,6 +1,7 @@
 ---
 title: Github Pages Readme
 layout: post
+author: Ted
 ---
 
 ## Welcome to GitHub Pages
