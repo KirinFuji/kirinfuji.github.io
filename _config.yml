@@ -1,6 +1,6 @@
 ---
 title: blog.kfuji.net
-timezone: UTC
+timezone: PST
 collections:
   authors:
     title: Authors
@@ -22,7 +22,7 @@ defaults:
     layout: author
 - scope:
     path: ''
-    type: Categories
+    type: categories
   values:
     layout: category
 - scope:

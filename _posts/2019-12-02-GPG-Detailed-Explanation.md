@@ -1,9 +1,9 @@
 ---
 title: GPG Detailed Explanation
 date: 2019-12-02 00:00:00 Z
+layout: post
 author: Ted
 category: Security
-layout: post
 ---
 
 # Page Under Construction

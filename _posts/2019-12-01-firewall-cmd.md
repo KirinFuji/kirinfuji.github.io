@@ -1,9 +1,9 @@
 ---
 title: firewall-cmd cheatsheet
 date: 2019-12-01 00:00:00 Z
+layout: post
 author: Ted
 category: Security
-layout: post
 ---
 
 # Managing firewalld
