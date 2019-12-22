@@ -3,7 +3,7 @@ title: GPG Detailed Explanation
 date: 2019-12-01 16:00:00 -08:00
 categories:
 - Security
-author: Ted
+author: Kirin
 category: Security
 layout: post
 ---

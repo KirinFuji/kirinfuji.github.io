@@ -3,7 +3,7 @@ title: firewall-cmd cheatsheet
 date: 2019-11-30 16:00:00 -08:00
 categories:
 - Security
-author: Ted
+author: Kirin
 category: Security
 layout: post
 ---
