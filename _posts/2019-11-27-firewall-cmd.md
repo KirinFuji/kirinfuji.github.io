@@ -13,7 +13,7 @@ layout: post
 
 ### Managing firewalld  
 -- Display whether service is running  
-`firewall-cmd --state` 
+`firewall-cmd --state`  
 -- Another command to display status of service  
 `systemctl status firewalld`  
 -- To restart service  
