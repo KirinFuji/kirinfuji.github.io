@@ -5,8 +5,8 @@ collections:
   authors:
     title: Authors
     output: true
-  categories2:
-    title: Categories2
+  categories:
+    title: Categories
     output: true
   posts:
     title: Posts
@@ -22,9 +22,9 @@ defaults:
     layout: author
 - scope:
     path: ''
-    type: Categories2
+    type: Categories
   values:
-    layout: category2
+    layout: category
 - scope:
     path: ''
     type: posts

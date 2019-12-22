@@ -6,7 +6,8 @@ categories:
 tags:
 - firewall-cmd
 - firewalld
-author: Security
+author: Ted
+category: Security
 layout: post
 ---
 
