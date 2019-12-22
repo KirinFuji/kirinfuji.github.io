@@ -1,0 +1,16 @@
+---
+title: Categories
+layout: default
+---
+
+<h1>Categories</h1>
+
+<ul>
+  {% for category in site.categories %}
+    <li>
+      <h2><a href="{{ category.url }}">{{ category.name }}</a></h2>
+     <!-- <h3>{{ category.position }}</h3> #Not sure what this is its outputting a gross looking 0 -->
+      <p>{{ category.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>
