@@ -8,3 +8,5 @@
   link: /author.html
 - name: Categories
   link: /category.html
+- name: Tags
+  link: /tags.html

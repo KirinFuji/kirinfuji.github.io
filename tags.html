@@ -1,0 +1,14 @@
+---
+title: Tags
+layout: default
+---
+
+<h1>Tags</h1>
+
+{% assign filtered_posts = site.posts | where: 'page.tags' %}
+  {% for tag in filtered_posts.page.tags %}
+   	<h1>Posts under:{{ tag }}</h1>
+	{% for post in filtered_posts | where: 'page.tags', tag %}
+	  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+	{% endfor %}
+  {% endfor %}
