@@ -17,3 +17,11 @@ https://jekyllrb.com/docs/step-by-step/03-front-matter/
 https://shopify.github.io/liquid/tags/control-flow/
 
 https://learn.siteleaf.com/content/metadata/
+
+https://haacked.com/archive/2018/06/24/comments-for-jekyll-blogs/
+
+https://60devs.com/adding-comments-to-your-jekyll-blog.html
+
+https://curtisvermeeren.github.io/2016/11/18/Jekyll-Google-Analytics.html
+
+https://just-comments.com/
