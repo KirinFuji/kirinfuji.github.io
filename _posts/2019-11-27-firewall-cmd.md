@@ -5,9 +5,7 @@ categories:
 - Security
 tags:
 - firewalld
-- firewall-cmd
 author: Kirin
-category: Security
 layout: post
 ---
 

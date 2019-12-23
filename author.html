@@ -10,7 +10,7 @@ layout: default
     <li>
       <h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
      <!-- <h3>{{ author.position }}</h3> #Not sure what this is its outputting a gross looking 0 -->
-      <p>{{ author.content | markdownify }}</p>
+      {{ author.content | markdownify }}
     </li>
   {% endfor %}
 </ul>

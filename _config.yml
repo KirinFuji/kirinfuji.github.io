@@ -5,9 +5,6 @@ collections:
   authors:
     title: Authors
     output: true
-  categories:
-    title: Categories
-    output: true
   posts:
     title: Posts
     output: true
@@ -20,11 +17,6 @@ defaults:
     type: authors
   values:
     layout: author
-- scope:
-    path: ''
-    type: categories
-  values:
-    layout: category
 - scope:
     path: ''
     type: posts

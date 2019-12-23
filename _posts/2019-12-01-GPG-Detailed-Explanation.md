@@ -5,9 +5,7 @@ categories:
 - Security
 tags:
 - GPG
-- Cryptology
 author: Kirin
-category: Security
 layout: post
 ---
 

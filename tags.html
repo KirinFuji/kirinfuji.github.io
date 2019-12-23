@@ -1,16 +1,25 @@
 ---
-title: Tags
 layout: default
+title: tags
 ---
 
-<h1>Tags</h1>
 
-{% assign filtered_posts = site.posts | where: 'filtered_posts.tags' %}
-  {% for tag in filtered_posts.tags %}
-   	<h1>Posts under:{{ tag }}</h1>
-  {% for post in filtered_posts %}
-    {% if post.tags == tag %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endif %}
-	{% endfor %}
-  {% endfor %}
+<ul>
+<div id="archives">
+{% for tag in site.tags %}
+  <div class="archive-group">
+    {% capture tag_name %}{{ tag | first }}{% endcapture %}
+    <div id="#{{ tag_name | slugize }}"></div>
+    <p></p>
+
+    <h2 class="tag-head">{{ tag_name }}</h2>
+    <a name="{{ tag_name | slugize }}"></a>
+    {% for post in site.tags[tag_name] %}
+    <article class="archive-item">
+     <li><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
+    </article>
+    {% endfor %}
+  </div>
+{% endfor %}
+</div>
+</ul>
