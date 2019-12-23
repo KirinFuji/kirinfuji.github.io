@@ -36,6 +36,7 @@ defaults:
     layout: default
 theme: jekyll-theme-hacker
 description: KirinFuji's Blog
+google_analytics: UA-154872147-1
 plugins:
 - jekyll-feed
 - jekyll-sitemap
