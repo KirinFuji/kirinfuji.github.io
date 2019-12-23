@@ -2,11 +2,11 @@
   link: /
 - name: Blog
   link: /blog.html
-- name: Authors
-  link: /author.html
 - name: Categories
   link: /categories.html
 - name: Tags
   link: /tags.html
+- name: Authors
+  link: /author.html
 - name: About
   link: /about.html
