@@ -7,4 +7,4 @@ categories:
 layout: open-embed-post
 ---
 
-/uploads/Nightcore%20-%20No%20Music.mp3?autoplay=0&loop=0&controls=1
+[Nightcore - No Music](https://blog.kfuji.net/uploads/Nightcore%20-%20No%20Music.mp3?autoplay=0&loop=0&controls=1)
