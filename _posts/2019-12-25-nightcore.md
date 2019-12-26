@@ -2,7 +2,6 @@
 title: Nightcore
 date: 2019-12-25 20:16:00 -08:00
 permalink: nightcore
-Field name: 
 embedded_media: true
 unlisted: true
 layout: post
@@ -27,3 +26,15 @@ layout: post
 ### Nightcore - Behind The Sun.mp3
 
 /uploads/Nightcore_-_Behind_The_Sun.mp3
+
+### Nightcore - Blind.mp3
+
+/uploads/Nightcore_-_Blind.mp3
+
+### Nightcore - Time Flies - Anime.mp3
+
+/uploads/Nightcore_-_Time_Flies_-_Anime.mp3
+
+### Nightcore - Medicine.mp3
+
+/uploads/Nightcore_-_Medicine.mp3
