@@ -1,10 +1,11 @@
 ---
-title: Music-Test
+title: Nightcore
 date: 2019-12-25 20:16:00 -08:00
-permalink: music-test
-published: false
+permalink: nightcore
 categories:
 - Music
+tags:
+- Nightcore
 Field name: 
 embedded_media: true
 layout: post
