@@ -49,6 +49,7 @@ jQuery(document).ready(function() {
         song.play();
 
         tracker.slider("option", "max", song.duration);
+        tracker.slider("option", "value", tracker.slider("value"));
 
         $('.play').addClass('hidden');
         $('.pause').addClass('visible');
