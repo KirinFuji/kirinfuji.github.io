@@ -13,6 +13,10 @@ layout: open-embed-post
 
 https://blog.kfuji.net/uploads/Nightcore%20-%20No%20Music.mp3?autoplay=0&loop=0&controls=1
 
+/uploads/Nightcore - No Music.mp3?autoplay=1&loop=1&controls=0
+/uploads/Nightcore%20-%20No%20Music.mp3?autoplay=1&loop=1&controls=0
+/uploads/Nightcore%20-%20No%20Music.mp3?autoplay=1&loop=1&controls=0
 /uploads/Nightcore%20-%20No%20Music.mp3?autoplay=0&loop=0&controls=1
+/uploads/Nightcore%20-%20No%20Music.mp3?autoplay=1&loop=1&controls=1
 
-'/uploads/Nightcore%20-%20No%20Music.mp3?autoplay=0&loop=0&controls=1'
+/uploads/Paper_Navy_-_08_-_Swan_Song.mp3
