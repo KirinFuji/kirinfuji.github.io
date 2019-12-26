@@ -1,0 +1,18 @@
+<div class="embed-container">
+  <iframe
+      src="https://www.youtube.com/embed/{{ include.id }}?autoplay={{ include.autoplay }}"
+      width="{{ include.width }}"
+      height="{{ include.height }}"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+
+include
+id
+width
+height
+autoplay
+
+{% include youtubePlayer.html id=oHg5SJYRHA0 width=1120 height=630 autoplay=1 %}
