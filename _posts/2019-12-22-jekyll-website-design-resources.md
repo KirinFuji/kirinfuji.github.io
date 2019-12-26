@@ -32,3 +32,5 @@ https://github.com/nathancy/jekyll-embed-video
 https://jekyllrb.com/docs/variables/
 
 https://www.script-tutorials.com/html5-audio-player-with-playlist/
+
+https://codepen.io/joeflash/pen/amapxk
