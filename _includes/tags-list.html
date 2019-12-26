@@ -9,11 +9,25 @@
     <h2 class="tag-head">{{ tag_name }}</h2>
     <a name="{{ tag_name | slugize }}"></a>
     {% for post in site.tags[tag_name] %}
+	  {% unless post.unlisted == true %}
     <article class="archive-item">
      <li><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
     </article>
+	  {% endunless %}
     {% endfor %}
   </div>
 {% endfor %}
 </div>
+</ul>
+
+
+<ul>
+  {% for post in site.posts %}
+    {% unless post[page.unlisted] == true %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt }}</p>
+    </li>
+	{% endunless %}
+  {% endfor %}
 </ul>
