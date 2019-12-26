@@ -5,6 +5,7 @@ layout: default
 
 {% for music_file in site.music %}
   {% if music_file.music_loc %}
+### {{ music_file.title}}  
     {% include gdrive-embed.html %}
   {% endif %}
 {% endfor %}
