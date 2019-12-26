@@ -3,9 +3,11 @@ title: Music-Test
 layout: default
 ---
 
+<h1>Music-Test</h1>
+
 {% for music_file in site.music %}
   {% if music_file.music_loc %}
-<h1>{{ music_file.title}}</h1>
-    <p>{% include gdrive-embed.html %}</p>
+<h3>{{ music_file.title}}</h3>
+    {% include gdrive-embed.html %}
   {% endif %}
 {% endfor %}
