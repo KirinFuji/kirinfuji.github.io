@@ -6,6 +6,9 @@ collections:
     title: Authors
     output: true
   uploads:
+    title: Uploads
+    output: false
+  music:
     title: Music
     output: false
   posts:
