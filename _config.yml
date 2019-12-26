@@ -5,15 +5,12 @@ collections:
   authors:
     title: Authors
     output: true
+  uploads:
+    title: Music
+    output: false
   posts:
     title: Posts
     output: true
-  uploads:
-    title: Uploads
-    output:
-  uploads:
-    title: Music
-    output:
 defaults:
 - scope:
     path: ''
