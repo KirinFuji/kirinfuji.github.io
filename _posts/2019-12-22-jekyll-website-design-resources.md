@@ -36,3 +36,5 @@ https://www.script-tutorials.com/html5-audio-player-with-playlist/
 https://codepen.io/joeflash/pen/amapxk
 
 https://codepen.io/craigstroman/pen/aOyRYx
+
+https://blog.enuma.io/update/2018/07/31/nix-markdown-pdf-svg.html
