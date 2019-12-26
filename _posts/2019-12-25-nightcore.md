@@ -19,3 +19,11 @@ layout: post
 ### Nightcore - Show Me Your Love.mp3  
 
 /uploads/Nightcore _-_Show_Me_Your_Love.mp3  
+
+### Nightcore - Always Here & Gone Tomorrow
+
+/uploads/Nightcore_-_Always_Here_&_Gone_Tomorrow.mp3
+
+### Nightcore - Behind The Sun.mp3
+
+/uploads/Nightcore_-_Behind_The_Sun.mp3
