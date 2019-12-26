@@ -10,3 +10,9 @@ layout: open-embed-post
 [Nightcore - No Music](https://blog.kfuji.net/uploads/Nightcore%20-%20No%20Music.mp3?autoplay=0&loop=0&controls=1)
 
 <a href="https://blog.kfuji.net/uploads/Nightcore%20-%20No%20Music.mp3?autoplay=0&loop=0&controls=1">Nightcore - No Music</a>
+
+https://blog.kfuji.net/uploads/Nightcore%20-%20No%20Music.mp3?autoplay=0&loop=0&controls=1
+
+/uploads/Nightcore%20-%20No%20Music.mp3?autoplay=0&loop=0&controls=1
+
+'/uploads/Nightcore%20-%20No%20Music.mp3?autoplay=0&loop=0&controls=1'
