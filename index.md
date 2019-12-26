@@ -1,6 +1,6 @@
 ---
 title: Index
-date: 2019-12-22 08:41:00 Z
+date: 2019-12-22 00:41:00 -08:00
 layout: default
 ---
 
