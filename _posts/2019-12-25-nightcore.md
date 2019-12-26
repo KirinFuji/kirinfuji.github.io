@@ -9,32 +9,44 @@ layout: post
 
 ### Nightcore - No Music  
 
-/uploads/Nightcore_-_No_Music.mp3  
+/music/Nightcore_-_No_Music.mp3  
 
 ### Nightcore - Dream Girl  
 
-/uploads/Nightcore_-_Dream_Girl.mp3  
+/music/Nightcore_-_Dream_Girl.mp3  
 
 ### Nightcore - Show Me Your Love.mp3  
 
-/uploads/Nightcore _-_Show_Me_Your_Love.mp3  
+/music/Nightcore _-_Show_Me_Your_Love.mp3  
 
 ### Nightcore - Always Here & Gone Tomorrow
 
-/uploads/Nightcore_-_Always_Here_&_Gone_Tomorrow.mp3
+/music/Nightcore_-_Always_Here_&_Gone_Tomorrow.mp3
 
 ### Nightcore - Behind The Sun
 
-/uploads/Nightcore_-_Behind_The_Sun.mp3
+/music/Nightcore_-_Behind_The_Sun.mp3
 
 ### Nightcore - Blind
 
-/uploads/Nightcore_-_Blind.mp3
+/music/Nightcore_-_Blind.mp3
 
 ### Nightcore - Time Flies - Anime
 
-/uploads/Nightcore_-_Time_Flies_-_Anime.mp3
+/music/Nightcore_-_Time_Flies_-_Anime.mp3
 
 ### Nightcore - Medicine
 
-/uploads/Nightcore_-_Medicine.mp3
+/music/Nightcore_-_Medicine.mp3
+
+### Feed Me - Blood Red
+
+/music/Feed_Me_-_Blood_Red.mp3
+
+### Nightcore - Lost Generation + Promised Land
+
+/music/Nightcore_-_Lost_generation_+_Promised_land.mp3
+
+### Nightcore - 7 Days
+
+/music/Nightcore_-_7_Days.mp3
