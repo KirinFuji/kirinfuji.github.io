@@ -1,0 +1,9 @@
+---
+layout: default
+title: Music-Test
+---
+
+{% assign found_music = site.music | where: 'music_loc' %}
+{% for music_file in found_music %}
+ {% include gdrive-embed.html source={{ music_file.music_loc }} %}
+{% endfor %}
