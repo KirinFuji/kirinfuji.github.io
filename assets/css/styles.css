@@ -145,7 +145,7 @@ header a, a:visited {
     width: 285px;
 }
 .ui-slider-range {
-    background: transparent url("../assets/images/spr.png") no-repeat scroll 5px -222px;
+    background: transparent url("../data/spr.png") no-repeat scroll 5px -222px;
     height: 100%;
     position: absolute;
     top: 0;
@@ -160,7 +160,7 @@ header a, a:visited {
     z-index: 2;
 }
 .volume .ui-slider-handle {
-    background: url("../assets/images/spr.png") no-repeat scroll -201px -188px rgba(0, 0, 0, 0);
+    background: url("../data/spr.png") no-repeat scroll -201px -188px rgba(0, 0, 0, 0);
     height: 13px;
     width: 13px;
 }
