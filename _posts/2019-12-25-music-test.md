@@ -5,8 +5,8 @@ permalink: music-test
 categories:
 - Music
 Field name: 
-layout: open-embed-post
 embedded_media: true
+layout: post
 ---
 
 Nightcore - No Music
