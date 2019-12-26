@@ -12,4 +12,6 @@ Nightcore - No Music
 
 /uploads/Nightcore_-_No_Music.mp3
 
+Nightcore - Dream Girl
+
 /uploads/Nightcore_-_Dream_Girl.mp3
