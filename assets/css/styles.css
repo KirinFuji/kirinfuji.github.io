@@ -38,7 +38,7 @@ header a, a:visited {
     width: 400px;
 }
 .player {
-    background: transparent url(".../images/spr.png") no-repeat scroll center top;
+    background: transparent url("../images/spr.png") no-repeat scroll center top;
     height: 162px;
     position: relative;
     width: 326px;
@@ -65,7 +65,7 @@ header a, a:visited {
     top: 40px;
 }
 .pl {
-    background: transparent url(".../images/spr.png") no-repeat scroll -274px -175px;
+    background: transparent url("../images/spr.png") no-repeat scroll -274px -175px;
     cursor: pointer;
     height: 34px;
     left: 270px;
@@ -94,7 +94,7 @@ header a, a:visited {
     width: 138px;
 }
 .controls .play, .controls .pause, .controls .rew, .controls .fwd {
-    background: transparent url(".../images/spr.png") no-repeat scroll 0 0;
+    background: transparent url("../images/spr.png") no-repeat scroll 0 0;
     float: left;
     height: 100%;
     width: 33%;
@@ -145,7 +145,7 @@ header a, a:visited {
     width: 285px;
 }
 .ui-slider-range {
-    background: transparent url(".../images/spr.png") no-repeat scroll 5px -222px;
+    background: transparent url("../images/spr.png") no-repeat scroll 5px -222px;
     height: 100%;
     position: absolute;
     top: 0;
@@ -160,7 +160,7 @@ header a, a:visited {
     z-index: 2;
 }
 .volume .ui-slider-handle {
-    background: url(".../images/spr.png") no-repeat scroll -201px -188px rgba(0, 0, 0, 0);
+    background: url("../images/spr.png") no-repeat scroll -201px -188px rgba(0, 0, 0, 0);
     height: 13px;
     width: 13px;
 }
