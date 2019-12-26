@@ -3,7 +3,9 @@ title: Music-Test
 layout: default
 ---
 
-{% assign found_music = site.music | where: 'music_loc' %}
-{% for music_file in found_music %}
- {% include gdrive-embed.html source={{ music_file.music_loc }} %}
+
+{% for music_file in site.music %}
+  {% if music_file.music_loc %}
+    {% include gdrive-embed.html %}
+  {% endif %}
 {% endfor %}
