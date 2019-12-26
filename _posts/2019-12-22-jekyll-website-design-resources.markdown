@@ -25,3 +25,5 @@ https://60devs.com/adding-comments-to-your-jekyll-blog.html
 https://curtisvermeeren.github.io/2016/11/18/Jekyll-Google-Analytics.html
 
 https://just-comments.com/
+
+https://github.com/nathancy/jekyll-embed-video
