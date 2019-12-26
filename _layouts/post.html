@@ -48,3 +48,6 @@ layout: default
 {{ content }}
 
 
+{% if page.embedded_media %}
+  {% include open-embed.html %}
+{% endif %}
