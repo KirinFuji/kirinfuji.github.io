@@ -23,18 +23,18 @@ layout: post
 
 /uploads/Nightcore_-_Always_Here_&_Gone_Tomorrow.mp3
 
-### Nightcore - Behind The Sun.mp3
+### Nightcore - Behind The Sun
 
 /uploads/Nightcore_-_Behind_The_Sun.mp3
 
-### Nightcore - Blind.mp3
+### Nightcore - Blind
 
 /uploads/Nightcore_-_Blind.mp3
 
-### Nightcore - Time Flies - Anime.mp3
+### Nightcore - Time Flies - Anime
 
 /uploads/Nightcore_-_Time_Flies_-_Anime.mp3
 
-### Nightcore - Medicine.mp3
+### Nightcore - Medicine
 
 /uploads/Nightcore_-_Medicine.mp3
