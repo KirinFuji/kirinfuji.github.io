@@ -27,15 +27,6 @@ jQuery(document).ready(function() {
 
         song = new Audio('assets/data/' + url);
 
-        song.addEventListener(“ended”, function (){
-            var next = $(‘.playlist li.active’).next();
-                if (next.length == 0) {
-                next = $(‘.playlist li:first-child’);
-                }
-            initAudio(next);
-            song.play();
-        });
-
         // timeupdate event listener
         song.addEventListener('timeupdate',function (){
             var curtime = parseInt(song.currentTime, 10);
