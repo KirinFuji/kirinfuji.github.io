@@ -10,7 +10,10 @@ collections:
     output: true
   uploads:
     title: Uploads
-    output: true
+    output:
+  uploads:
+    title: Music
+    output:
 defaults:
 - scope:
     path: ''
