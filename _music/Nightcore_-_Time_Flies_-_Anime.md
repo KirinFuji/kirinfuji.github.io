@@ -1,6 +1,6 @@
 ---
 title: Nightcore - Time Flies
-music_loc: https://drive.google.com/file/d/1Fd5COH7TKAu2-w-cz8gxksAePGNmp4dX/preview?usp=sharing
-gdrive_id: 1Fd5COH7TKAu2-w-cz8gxksAePGNmp4dX
+music_loc: https://www.dropbox.com/s/nc9azbsvt62azm8/Copy%20of%20Nightcore_-_Time_Flies_-_Anime.mp3?dl=0
+dropbox_id: s/nc9azbsvt62azm8/Copy%20of%20Nightcore_-_Time_Flies_-_Anime.mp3
 ---
 
