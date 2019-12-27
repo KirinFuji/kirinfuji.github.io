@@ -35,7 +35,7 @@ style: default
 			{% for music_file in site.music %}
 			  {% if music_file.gdrive_id %}
 			<li><a href="https://drive.google.com/uc?id={{ music_file.gdrive_id }}&export=download">{{ music_file.title}}</a></li>
-			  {% endif 
+			  {% endif %}
 			  {% if music_file.dropbox_id %}
 			<li><a href="https://www.dropbox.com/{{ music_file.dropbox_id }}?dl=1">{{ music_file.title}}</a></li>
 			  {% endif %}
