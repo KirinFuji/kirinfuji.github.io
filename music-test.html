@@ -10,10 +10,11 @@ layout: default
 
 {% for music_file in site.music %}
   {% if music_file.gdrive_id %}
-<h3>{{ music_file.title}}</h3>
+    <h3>{{ music_file.title}}</h3>
     {% include gdrive-embed.html %}
   {% endif %}
   {% if music_file.dropbox_id %}
+    <h3>{{ music_file.title}}</h3>
     {% include dropbox-embed.html %}
   {% endif %}
 {% endfor %}
