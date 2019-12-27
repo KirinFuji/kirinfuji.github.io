@@ -38,12 +38,14 @@ style: default
 	</div>
 	<div class="playlist-wrap">
 		<ol>
+			<li><a href="https://docs.google.com/uc?export=download&id=1Fd5COH7TKAu2-w-cz8gxksAePGNmp4dX">Nightcore - Time Flies</a></li>
 			{% for music_file in site.music %}
 			  {% if music_file.gdrive_id %}
 			<li><a href="https://docs.google.com/uc?export=download&id={{ music_file.gdrive_id }}">{{ music_file.title}}</a></li>
 			  {% include gdrive-embed.html %}
 			  {% endif %}
 		    {% endfor %}
+			<li><a href="//archive.org/download/mythium/SSB___11_03_TFTake_2">The Forsaken (Take 2) - Smith St. Basement (Nov. '03)</a></li>
 		</ol>
 	</div>
 </div>
