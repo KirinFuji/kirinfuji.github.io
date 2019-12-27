@@ -1,8 +1,8 @@
 ---
 title: Jekyll Website Design Resources
 date: 2019-12-22 16:02:00 -08:00
-published: false
 author: Kirin
+unlisted: true
 ---
 
 # Useful Pages for designing Jekyll websites
