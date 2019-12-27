@@ -8,5 +8,5 @@ unlisted: true
 
 # Secret Links
 
-[https://blog.kfuji.net/music-test](https://blog.kfuji.net/music-test)
-[https://blog.kfuji.net/playlist-index](https://blog.kfuji.net/playlist-index)
+[https://blog.kfuji.net/music-test](https://blog.kfuji.net/music-test)  
+[https://blog.kfuji.net/playlist-index](https://blog.kfuji.net/playlist-index)  
