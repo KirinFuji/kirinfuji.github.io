@@ -52,3 +52,5 @@ https://developers.google.com/drive/api/v3/manage-uploads#resumable
 https://tanaikech.github.io/2017/02/08/file-upload-and-download-with-file-convert-for-curl-using-drive-api/  
 
 https://olivermarshall.net/how-to-upload-a-file-to-google-drive-from-the-command-line/  
+
+https://catswhocode.com/html-audio-tag/  
