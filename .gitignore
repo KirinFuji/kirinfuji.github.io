@@ -1,4 +1,3 @@
 _site/
-script/
-db_token.var
-repo.var
+script/db_token.var
+script/repo.var
