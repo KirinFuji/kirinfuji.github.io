@@ -1,6 +1,10 @@
+#!/usr/bin/env php
+
 <?php
 
 $db_auth = file_get_contents('./db_token.var');
+$db_auth = str_replace("\n", "", $db_auth); 
+
 
 $parameters = array('path' => "/$argv[1]");
 
@@ -17,6 +21,8 @@ $curlOptions = array(
 
 $ch = curl_init('https://api.dropboxapi.com/2/sharing/create_shared_link_with_settings');
 curl_setopt_array($ch, $curlOptions);
+
+#var_dump($curlOptions);
 
 $response = curl_exec($ch);
 echo $response;

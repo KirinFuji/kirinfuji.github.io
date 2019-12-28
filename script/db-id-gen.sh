@@ -30,15 +30,15 @@
 export localfile="$1"
 export remotefile="$2"
 export output="$3"   #(term | github)
-export db_auth="<dropbox auth token>" #  $(cat ./db_token.var)
-export gitrepo="githubpages.github.io" # $(cat ./repo.var)
+export db_auth="$(cat ./db_token.var)"
+export gitrepo="$(cat ./repo.var)"
 
 # - - - - - -
 
 #Dropbox Check if File on Server
 db_check_server() {
 curl -X POST https://api.dropboxapi.com/2/files/list_folder \
---header 'Authorization: Bearer $db_auth' \
+--header "Authorization: Bearer $db_auth" \
 --header 'Content-Type: application/json' \
 --data '{"path":""}' 2> /dev/null | python -mjson.tool | grep -qi "$remotefile"
 
