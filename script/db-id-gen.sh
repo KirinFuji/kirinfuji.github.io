@@ -107,7 +107,7 @@ fi
 
 if [ "$output" = "github" ];then
   pushd .. &> /dev/null
-  if [[ $(pwd | grep -i '$gitrepo') == *"$gitrepo" ]];then
+  if [[ $(pwd | grep -i "$gitrepo") == *"$gitrepo" ]];then
     if ! [ -e "./_music/$remotefile.md" ];then
       echo "---" > "./_music/$remotefile.md"
           echo "title: $remotefile" >> "./_music/$remotefile.md"
