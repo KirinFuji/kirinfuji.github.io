@@ -1,2 +1,4 @@
 _site/
 script/
+db_token.var
+repo.var
