@@ -54,3 +54,7 @@ https://tanaikech.github.io/2017/02/08/file-upload-and-download-with-file-conver
 https://olivermarshall.net/how-to-upload-a-file-to-google-drive-from-the-command-line/  
 
 https://catswhocode.com/html-audio-tag/  
+
+https://www.siteleaf.com/blog/tag-pages-in-jekyll-and-siteleaf/  
+
+https://www.siteleaf.com/blog/author-pages-in-jekyll-and-siteleaf/  
