@@ -58,3 +58,5 @@ https://catswhocode.com/html-audio-tag/
 https://www.siteleaf.com/blog/tag-pages-in-jekyll-and-siteleaf/  
 
 https://www.siteleaf.com/blog/author-pages-in-jekyll-and-siteleaf/  
+
+https://www.siteleaf.com/blog/jamstack-ecommerce/  
