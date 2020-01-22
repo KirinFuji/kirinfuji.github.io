@@ -33,7 +33,7 @@ Finally we create our payload with the 'showpassword' variable set to 'yes' inst
 
 {% highlight php linenos %}
 
-<?
+<?php
 
 $plaintext = array( "showpassword"=>"no", "bgcolor"=>"#ffffff");
 $ciphertext = 'ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEV4sFxFeaAw=';
