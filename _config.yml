@@ -5,26 +5,21 @@ collections:
   authors:
     title: Authors
     output: true
-  categories:
-    title: Categories
-    output: true
+  music:
+    title: Music
+    output: false
   posts:
     title: Posts
     output: true
   uploads:
     title: Uploads
-    output: true
+    output: false
 defaults:
 - scope:
     path: ''
     type: authors
   values:
     layout: author
-- scope:
-    path: ''
-    type: categories
-  values:
-    layout: category
 - scope:
     path: ''
     type: posts

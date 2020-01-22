@@ -12,13 +12,42 @@ layout: default
     - <a href="{{ author.url }}">{{ author.name }}</a>
   {% endif %}
   {% endif %}
+
+<class="post-categories">
+  {% if post %}
+    {% assign categories = post.categories %}
+  {% else %}
+    {% assign categories = page.categories %}
+  {% endif %}
+  {% for category in categories %}
+    - <a href="{{site.baseurl}}/categories.html">{{category}}</a> <!--/#{{category|slugize}}"-->
+  {% unless forloop.last %}&nbsp;{% endunless %}
+  {% endfor %}
+
+<class="post-tags">
+  {% if post %}
+    {% assign tags = post.tags %}
+  {% else %}
+    {% assign tags = page.tags %}
+  {% endif %}
+  {% for tag in tags %}
+    - <a href="{{site.baseurl}}/tags.html">{{tag}}</a> <!--/#{{tag|slugize}}"-->
+  {% unless forloop.last %}&nbsp;{% endunless %}
+  {% endfor %}
   
+<!--
   {% if page.category %}
   {% assign category = site.categories | where: 'short_name', page.category | first %}
   {% if category %}
     - <a href="{{ category.url }}">{{ category.name }}</a>
   {% endif %}
   {% endif %}
+-->
 </p>
 
 {{ content }}
+
+
+{% if page.embedded_media %}
+  {% include open-embed.html %}
+{% endif %}

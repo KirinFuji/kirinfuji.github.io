@@ -1,5 +1,6 @@
 ---
 title: Ted
+published: false
 position: 0
 short_name: Ted
 name: Ted Doe

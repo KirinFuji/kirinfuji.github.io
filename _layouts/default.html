@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
@@ -21,8 +24,8 @@
           {% if site.show_downloads %}
             <a href="{{ site.github.zip_url }}" class="btn">Download as .zip</a>
             <a href="{{ site.github.tar_url }}" class="btn">Download as .tar.gz</a>
+       <!-- <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on GitHub</a> -->
           {% endif %}
-         <!-- <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on GitHub</a> -->
         </section>
       </div>
     </header>
@@ -32,6 +35,12 @@
         {{ content }}
       </section>
     </div>
+  <footer>
+    </br>
+    </br>
+  </footer>    
+
+  </body>
 
     {% if site.google_analytics %}
       <script>
@@ -43,5 +52,5 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
-  </body>
+
 </html>

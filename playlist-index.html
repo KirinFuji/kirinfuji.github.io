@@ -1,0 +1,48 @@
+---
+style: default
+---
+
+<title>Test-Playlist</title>
+<link rel="stylesheet" href="./style.css">
+
+<body>
+<div class="page">
+	<div class="player-wrap" data-url="https://drive.google.com/uc?id=1Fd5COH7TKAu2-w-cz8gxksAePGNmp4dX&export=download" data-title="Nightcore - Time Flies">
+		<div class="button">Play</div>
+    <div class="info">
+      <h1>Album: Nightcore</h1>
+      <p class="action">&nbsp;</p>
+      <p class="title ellipsis"></p>
+    </div>
+		<div class="player">
+			<audio preload></audio>
+			<div class="playpause">
+				<div class="play"><svg viewBox="0 0 14 14"><path d="M0,0 L0,14 L11,7 L0,0 Z"/></svg></div>
+				<div class="pause"><svg viewBox="0 0 14 14"><path d="M0,14 L4,14 L4,0 L0,0 L0,14 L0,14 Z M8,0 L8,14 L12,14 L12,0 L8,0 L8,0 Z"/></svg></div>
+			</div>
+			<div class="timer">
+				<div class="current">0:00:00</div>
+				<div>/</div>
+				<div class="duration">0:00:00</div>
+			</div>
+			<div><input type="range" min="0" max="100" step=".1" value="0" class="seek"></div>
+			<div class="prev"><svg viewBox="0 0 12 12"><path d="M3.5,6 L12,12 L12,0 L3.5,6 Z M0,0 L0,12 L2,12 L2,0 L0,0 L0,0 Z"/></svg></div>
+			<div class="next"><svg viewBox="0 0 12 12"><path d="M0,12 L8.5,6 L0,0 L0,12 L0,12 Z M10,0 L10,12 L12,12 L12,0 L10,0 L10,0 Z"/></svg></div>
+		</div>
+	</div>
+	<div class="playlist-wrap">
+		<ol>
+			{% for music_file in site.music %}
+			  {% if music_file.gdrive_id %}
+			<li><a href="https://drive.google.com/uc?id={{ music_file.gdrive_id }}&export=download">{{ music_file.title}}</a></li>
+			  {% endif %}
+			  {% if music_file.dropbox_id %}
+			<li><a href="https://dl.dropboxusercontent.com/s/{{ music_file.dropbox_id }}">{{ music_file.title}}</a></li>
+			  {% endif %}
+			{% endfor %}
+		</ol>
+	</div>
+</div>
+  <script  src="./script.js"></script>
+
+</body>
