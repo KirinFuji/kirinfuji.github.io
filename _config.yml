@@ -26,7 +26,7 @@ defaults:
   values:
     permalink: "/blog/:title/"
     layout: post
-    author: 
+    author: Kirin
 - scope:
     path: ''
   values:
