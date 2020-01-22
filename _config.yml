@@ -22,7 +22,7 @@ defaults:
     path: ''
     type: blog_categories
   values:
-    permalink: "/categories/:title/"
+    permalink: "/categories/:title.html"
     layout: default
 - scope:
     path: ''
