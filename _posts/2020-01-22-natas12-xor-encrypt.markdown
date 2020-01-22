@@ -6,7 +6,7 @@ categories:
 tags:
 - Ethical Hacking
 blog_category: Security
-description: "OverTheWire.org wargame demonstrating XOR cipher weakness."
+description: OverTheWire.org wargame demonstrating XOR cipher weakness.
 ---
 
 ## Introduction
