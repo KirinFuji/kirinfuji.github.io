@@ -10,7 +10,7 @@ blog_category: Security
 
 ## Introduction
 
-I was trying out the Natas wargame now that I know more about web application penetration testing and came across this level that was significantly more challenging then the first 10 levels.
+I was trying out the Natas wargame now that I know more about web application penetration testing and came across this level that was more challenging then the first 10 levels.
 
 Natas is a web application based wargame where some awesome people host multiple purposefully vulnerable web applications that contain popular known vulnerabilities that when triggered give credentials to get to the next level.
 
