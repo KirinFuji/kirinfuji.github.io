@@ -1,5 +1,5 @@
 ---
-title: Natas12 XOR cipher
+title: Natas11 XOR cipher
 date: 2020-01-22 00:35:00 -08:00
 categories:
 - Security
