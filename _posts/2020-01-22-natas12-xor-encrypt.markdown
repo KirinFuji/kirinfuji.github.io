@@ -43,3 +43,10 @@ print("Payload-Cookie: ".base64_encode(xor_encrypt(json_encode($payload),$foundk
 ?>
 
 {% endhighlight %}
+
+```
+xor_encrypt-Key: qw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jq
+Ciphered-Cookie: ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEV4sFxFeaAw=
+Deciphered-Cookie: {"showpassword":"no","bgcolor":"#ffffff"}
+Payload-Cookie: ClVLIh4ASCsCBE8lAxMacFMOXTlTWxooFhRXJh4FGnBTVF4sFxFeLFMK
+```
