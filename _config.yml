@@ -30,11 +30,11 @@ defaults:
   values:
     permalink: "/music/:title.html"
     layout: default
-    artist:
-    genre:
-    music_loc:
-    gdrive_id:
-    dropbox_id:
+    artist: 
+    genre: 
+    music_loc: 
+    gdrive_id: 
+    dropbox_id: 
 - scope:
     path: ''
     type: authors
