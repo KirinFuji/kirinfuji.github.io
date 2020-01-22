@@ -23,7 +23,7 @@ defaults:
     type: blog_categories
   values:
     permalink: "/categories/:title.html"
-    layout: default
+    layout: blog_category
 - scope:
     path: ''
     type: authors
