@@ -1,12 +1,12 @@
 - name: Home
   link: /
-- name: Blog
-  link: /blog.html
+- name: Posts
+  link: /posts
 - name: Categories
-  link: /categories.html
+  link: /categories
 - name: Tags
-  link: /tags.html
+  link: /tags
 - name: Authors
-  link: /authors.html
+  link: /authors
 - name: About
-  link: /about.html
+  link: /about

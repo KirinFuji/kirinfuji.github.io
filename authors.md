@@ -1,6 +1,7 @@
 ---
 title: Authors
 layout: default
+permalink: authors
 ---
 
 <h1>Authors</h1>

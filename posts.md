@@ -1,6 +1,7 @@
 ---
-title: Blog
+title: Posts
 layout: default
+permalink: posts
 ---
 
 # Latest Posts
