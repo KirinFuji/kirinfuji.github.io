@@ -1,6 +1,10 @@
 ---
 title: Natas12 xor_encrypt
 date: 2020-01-22 00:35:00 -08:00
+categories:
+- Security
+tags:
+- Ethical Hacking
 ---
 
 ### Explanation
