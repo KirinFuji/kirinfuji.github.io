@@ -2,7 +2,7 @@
   {% for post in site.posts %}
     {% unless post.unlisted == true %}
     <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date_to_string }}</h2>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date_to_string }} - <a href="{{site.baseurl}}/categories/{{post.blog_category}}">{{post.blog_category}}</a></h2>
       <p>{{ post.description }}</p>
     </li>
     {% endunless %}
