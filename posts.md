@@ -1,7 +1,7 @@
 ---
 title: Posts
-layout: default
 permalink: posts
+layout: default
 ---
 
 # Latest Posts

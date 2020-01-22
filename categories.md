@@ -1,7 +1,7 @@
 ---
 title: Categories
-layout: default
 permalink: categories
+layout: default
 ---
 
 {% include categories-list.html %}

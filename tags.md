@@ -1,7 +1,7 @@
 ---
 title: Tags
-layout: default
 permalink: tags
+layout: default
 ---
 
 {% include tags-list.html %}

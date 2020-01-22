@@ -1,7 +1,7 @@
 ---
 title: Authors
-layout: default
 permalink: authors
+layout: default
 ---
 
 <h1>Authors</h1>
