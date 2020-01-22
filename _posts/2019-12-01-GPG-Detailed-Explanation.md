@@ -7,13 +7,16 @@ categories:
 tags:
 - GPG
 author: Kirin
+description: Alot of information pertaining to GPG. Has a step by step Bob and Alice
+  example.
+blog_category: Security
 layout: post
 ---
 
 # Page Under Construction
 
 
-### ### ### CHEAT SHEET ### ### ###
+
 
 #send an encrypted attachment via linux cli
 # Note, you do not need to generate a key on the sending machine.
