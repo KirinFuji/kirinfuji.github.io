@@ -6,7 +6,9 @@ categories:
 - Security
 tags:
 - firewalld
+description: A cheatsheet document for managing CentOS 7 firewalld/firewall-cmd
 author: Kirin
+blog_category: Security
 layout: post
 ---
 
