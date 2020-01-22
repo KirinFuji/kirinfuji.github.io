@@ -1,7 +1,9 @@
 ---
-title: natas12 xor_encrypt
+title: Natas12 xor_encrypt
 date: 2020-01-22 00:35:00 -08:00
 ---
+
+### Explanation
 
 I was trying out the Natas wargame now that I know more about web application penetration testing and came across this level that was significantly more challenging then the first 11 levels.
 
@@ -14,6 +16,8 @@ We can get the key by running the function by using the base64 decoded cookie as
 The key ends up being 'qw8J'. Just to verify I ciphered the plain text using the key and got the same cipher text and took my cookie and deciphered it getting the same plain text.
 
 Finally we create our payload with the 'showpassword' variable set to 'yes' instead of 'no' and edit our cookie and refresh the page to get the password for Natas 12.
+
+### Code
 
 {% highlight php linenos %}
 <?
@@ -43,6 +47,8 @@ print("Payload-Cookie: ".base64_encode(xor_encrypt(json_encode($payload),$foundk
 ?>
 
 {% endhighlight %}
+
+### Output
 
 ```
 xor_encrypt-Key: qw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jq
