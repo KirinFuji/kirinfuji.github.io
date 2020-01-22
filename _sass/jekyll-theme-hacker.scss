@@ -82,13 +82,11 @@ header h2 {
 }
 
 .footer {
-   position: static;
-   background: rgba(0, 0, 0, 0.1);
-   width: 20%;
-   border-top: 1px dashed $conifer; //footer;
-   padding: 5px 0;
-   left: 0;
+   position:absolute;
    bottom: 0;
+   background: rgba(0, 0, 0, 0.1);
+   width: 100%;
+   border-top: 1px dashed $conifer; //footer;
    text-align: center;
    color: #677;
 }
