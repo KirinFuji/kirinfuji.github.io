@@ -22,13 +22,13 @@ defaults:
     path: ''
     type: blog_categories
   values:
-    permalink: "/categories/:title.html"
+    permalink: "/categories/:title"
     layout: blog_category
 - scope:
     path: ''
     type: music
   values:
-    permalink: "/music/:title.html"
+    permalink: "/music/:title"
     layout: default
     artist: 
     genre: 
@@ -39,13 +39,13 @@ defaults:
     path: ''
     type: authors
   values:
-    permalink: "/authors/:title.html"
+    permalink: "/authors/:title"
     layout: author
 - scope:
     path: ''
     type: posts
   values:
-    permalink: "/posts/:title/"
+    permalink: "/posts/:title"
     layout: post
     author: Kirin
     blog_category: 
