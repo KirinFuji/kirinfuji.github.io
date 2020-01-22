@@ -5,6 +5,7 @@ categories:
 - Security
 tags:
 - Ethical Hacking
+blog_category: Security
 ---
 
 ## Introduction
