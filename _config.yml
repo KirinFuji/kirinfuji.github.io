@@ -24,7 +24,9 @@ defaults:
     path: ''
     type: posts
   values:
+    permalink: "/blog/:title/"
     layout: post
+    author: 
 - scope:
     path: ''
   values:
