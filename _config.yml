@@ -5,6 +5,9 @@ collections:
   authors:
     title: Authors
     output: true
+  blog_categories:
+    title: Blog Categories
+    output: true
   music:
     title: Music
     output: false
