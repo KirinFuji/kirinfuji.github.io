@@ -36,8 +36,8 @@ defaults:
     permalink: "/blog/:title/"
     layout: post
     author: Kirin
-    blog_category:
-    unlisted:
+    blog_category: 
+    unlisted: 
 - scope:
     path: ''
   values:
