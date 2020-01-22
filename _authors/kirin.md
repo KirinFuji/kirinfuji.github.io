@@ -5,4 +5,4 @@ short_name: Kirin
 name: Kirin Fuji
 ---
 
-Kirin has been tinkering with technology for a long time.
+Kirin has been building, breaking, and using information technology for a long time.
