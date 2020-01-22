@@ -32,10 +32,11 @@ Finally we create our payload with the 'showpassword' variable set to 'yes' inst
 ### Code
 
 {% highlight php linenos %}
+
 <?
 
 $plaintext = array( "showpassword"=>"no", "bgcolor"=>"#ffffff");
-$ciphertext = base64_decode('ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEV4sFxFeaAw=');
+$ciphertext = 'ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEV4sFxFeaAw=';
 $foundkey = 'qw8J';
 $payload = array( "showpassword"=>"yes", "bgcolor"=>"#ffffff");
 
@@ -51,7 +52,7 @@ function xor_encrypt($in,$keyin) {
     return $outText;
 }
 
-print("xor_encrypt-Key: ".xor_encrypt(json_encode($plaintext),$ciphertext)."\n");
+print("xor_encrypt-Key: ".xor_encrypt(json_encode($plaintext),base64_decode($ciphertext))."\n");
 print("Ciphered-Cookie: ".base64_encode(xor_encrypt(json_encode($plaintext),$foundkey))."\n");
 print("Deciphered-Cookie: ".xor_encrypt($ciphertext,$foundkey)."\n");
 print("Payload-Cookie: ".base64_encode(xor_encrypt(json_encode($payload),$foundkey))."\n");
