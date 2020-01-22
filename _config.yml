@@ -20,6 +20,12 @@ collections:
 defaults:
 - scope:
     path: ''
+    type: blog_categories
+  values:
+    permalink: "/categories/:title/"
+    layout: default
+- scope:
+    path: ''
     type: authors
   values:
     layout: author
