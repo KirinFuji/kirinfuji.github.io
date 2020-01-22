@@ -16,18 +16,26 @@
     <header>
       <div class="container">
         <a id="a-title" href="{{ '/' | relative_url }}">
-          <h1>{{ site.title }}</h1>
+          <h1>{{ site.title | default: site.github.repository_name }}</h1>
         </a>
-        <h2>{{ site.description }}</h2>
+        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
       </div>
     </header>
-    <div id="page-container">
-      <div id="content-wrap">
-          {{ content }}
-      </div>
-      <footer id="footer"></footer>
+
+    <div class="container">
+      <section id="main_content">
+        {{ content }}
+      </section>
     </div>
-   </body>
+  </body>
+
+<!--
+ <footer>
+<div class="footer">
+  <p>./blog.kfuji.net</p>
+</div>
+ </footer>
+-->
   
     {% if site.google_analytics %}
       <script>
