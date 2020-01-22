@@ -26,14 +26,26 @@ defaults:
     layout: blog_category
 - scope:
     path: ''
+    type: music
+  values:
+    permalink: "/music/:title.html"
+    layout: default
+    artist:
+    genre:
+    music_loc:
+    gdrive_id:
+    dropbox_id:
+- scope:
+    path: ''
     type: authors
   values:
+    permalink: "/authors/:title.html"
     layout: author
 - scope:
     path: ''
     type: posts
   values:
-    permalink: "/blog/:title/"
+    permalink: "/posts/:title/"
     layout: post
     author: Kirin
     blog_category: 
