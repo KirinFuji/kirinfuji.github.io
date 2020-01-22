@@ -1,5 +1,5 @@
 ---
-title: Natas12 xor_encrypt
+title: Natas12 XOR cipher
 date: 2020-01-22 00:35:00 -08:00
 categories:
 - Security
@@ -7,15 +7,21 @@ tags:
 - Ethical Hacking
 ---
 
-### Explanation
+## Introduction
 
-I was trying out the Natas wargame now that I know more about web application penetration testing and came across this level that was significantly more challenging then the first 11 levels.
+I was trying out the Natas wargame now that I know more about web application penetration testing and came across this level that was significantly more challenging then the first 10 levels.
+
+Natas is a web application based wargame where some awesome people host multiple purposefully vulnerable web applications that contain popular known vulnerabilities that when triggered give credentials to get to the next level.
+
+https://overthewire.org/wargames/natas/
+
+### Technical Explanation
 
 They give you the source code to the page but redact the xor_encrypt key however we have available both a ciphertext and plaintext that are related.
 
-I modified the function just by adding a second value to the function instead of it using a hard coded key.
+I modified the function just by adding a second parameter to the function instead of it using a hard coded key.
 
-We can get the key by running the function by using the base64 decoded cookie as the key and json encoded, hard-coded default plaintext, that was available in the source code.
+We can get the key by running the function, using the base64 decoded cookie as the key, and json encoded default plaintext that was available in the source code.
 
 The key ends up being 'qw8J'. Just to verify I ciphered the plain text using the key and got the same cipher text and took my cookie and deciphered it getting the same plain text.
 
@@ -60,3 +66,4 @@ Ciphered-Cookie: ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEV4sFxFeaAw=
 Deciphered-Cookie: {"showpassword":"no","bgcolor":"#ffffff"}
 Payload-Cookie: ClVLIh4ASCsCBE8lAxMacFMOXTlTWxooFhRXJh4FGnBTVF4sFxFeLFMK
 ```
+
