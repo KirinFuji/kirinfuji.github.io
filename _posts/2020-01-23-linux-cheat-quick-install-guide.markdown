@@ -1,6 +1,10 @@
 ---
 title: Linux Cheat Quick Install Guide
 date: 2020-01-23 21:56:00 -08:00
+categories:
+- Quick Install Guide
+tags:
+- Shell Script
 description: Linux 'cheat' command line utility used to summon cheatsheets similar
   to 'man' but containing brief information and usage examples.
 blog_category: Quick Install Guides
