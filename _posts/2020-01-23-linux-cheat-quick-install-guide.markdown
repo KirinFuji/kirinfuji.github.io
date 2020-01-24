@@ -23,7 +23,7 @@ You will need to figure out your os (arm[5,6,7],amd64,etc...) and will need to r
 
 Once installed, all the related files will be in ~/.config/cheat/ and the executable will be in ~/bin.  
 
-Replace <OS_VERSION> and <URL> with aforementioned details, and paste this entire code block:
+Replace \<OS_VERSION\> and \<URL\> with aforementioned details, and paste this entire code block:
 {% highlight shell %}
 #!/bin/bash
 
