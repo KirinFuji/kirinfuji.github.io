@@ -15,13 +15,17 @@ sudo apt-get install hostapd dnsmasq
 
 ## Setup
 
+This is in alpha/beta stages. Script draft complete need to test.
 
 {% highlight shell %}
 #!/bin/bash
 
 # Written by Kirin
 
-# Example
+# Edit the below variables to suit your needs.
+
+# Variables
+
 # wap_interface="wlan0" ;
 # wap_ssid="Default SSID" ;
 # wap_channel="7" ;
@@ -37,8 +41,9 @@ sudo apt-get install hostapd dnsmasq
 # wap_dhcp_r_subnet="$wap_subnet"
 # wap_dhcp_option_3_gw="$wap_gw"
 # wap_dhcp_option_6_dns="$wap_ip"
-# fwd_src_int
-fwd_src_int
+# fwd_packets="0"
+# fwd_src_int="$wap_interface"
+# fwd_dst_int="eth0"
 
 # Automated Script
 
@@ -85,10 +90,14 @@ dnsmasq -C dnsmasq.conf -d
 
 popd &> /dev/null
 
-iptables --table nat --append POSTROUTING --out-interface "$fwd_dst_int" -j MASQUERADE
-iptables --append FORWARD --in-interface "$fwd_src_int" -j ACCEPT
+if [ "$fwd_packets" = "1" ]; then
 
-echo 1 > /proc/sys/net/ipv4/ip_forward
+iptables --table nat --append POSTROUTING --out-interface "$fwd_dst_int" -j MASQUERADE ;
+iptables --append FORWARD --in-interface "$fwd_src_int" -j ACCEPT ;
+
+echo 1 > /proc/sys/net/ipv4/ip_forward ;
+
+fi ;
 
 exit 0
 {% endhighlight %}
