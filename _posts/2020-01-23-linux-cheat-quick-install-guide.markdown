@@ -40,6 +40,7 @@ mkdir -p ~/bin ;
 pushd ~/bin &>/dev/null ;
 wget "$cheat_binary_url" &> /dev/null ;
 ln -s "$(pwd)/$cheat_binary_os_version" cheat ;
+chmod +x cheat;
 popd &> /dev/null ;
 
 mkdir -p ~/.config/cheat ;
