@@ -33,24 +33,24 @@ This is in alpha/beta stages. Script draft complete need to test.
 
 # Variables
 
-# wap_interface="wlan0" ;
-# wap_ssid="Default SSID" ;
-# wap_channel="7" ;
-# wap_psk="P@ssw0rd1" ;
-# wap_netaddr="192.168.1.0" ;
-# wap_subnet="255.255.255.0" ;
-# wap_ip="192.168.1.1" ;
-# wap_gw="192.168.1.1" ;
-# wap_dns_fwd_target="1.1.1.1" ;
-# wap_dns_listenaddr="127.0.0.1" ;
-# wap_dhcp_r_start="192.168.1.150"
-# wap_dhcp_r_end="192.168.1.200"
-# wap_dhcp_r_subnet="$wap_subnet"
-# wap_dhcp_option_3_gw="$wap_gw"
-# wap_dhcp_option_6_dns="$wap_ip"
-# fwd_packets="0"
-# fwd_src_int="$wap_interface"
-# fwd_dst_int="eth0"
+wap_interface="wlan0" ;
+wap_ssid="Default SSID" ;
+wap_channel="7" ;
+wap_psk="P@ssw0rd1" ;
+wap_netaddr="192.168.1.0" ;
+wap_subnet="255.255.255.0" ;
+wap_ip="192.168.1.1" ;
+wap_gw="192.168.1.1" ;
+wap_dns_fwd_target="1.1.1.1" ;
+wap_dns_listenaddr="127.0.0.1" ;
+wap_dhcp_r_start="192.168.1.150"
+wap_dhcp_r_end="192.168.1.200"
+wap_dhcp_r_subnet="$wap_subnet"
+wap_dhcp_option_3_gw="$wap_gw"
+wap_dhcp_option_6_dns="$wap_ip"
+fwd_packets="0"
+fwd_src_int="$wap_interface"
+fwd_dst_int="eth0"
 
 # Automated Script
 
