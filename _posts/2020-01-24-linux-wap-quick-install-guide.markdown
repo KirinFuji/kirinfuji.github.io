@@ -48,7 +48,7 @@ wap_dhcp_r_end="192.168.1.200"
 wap_dhcp_r_subnet="$wap_subnet"
 wap_dhcp_option_3_gw="$wap_gw"
 wap_dhcp_option_6_dns="$wap_ip"
-fwd_packets="0"
+fwd_packets="0" # Set to 1 to enable packet forwarding.
 fwd_src_int="$wap_interface"
 fwd_dst_int="eth0"
 
