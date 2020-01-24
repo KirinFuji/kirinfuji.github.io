@@ -1,6 +1,13 @@
 ---
 title: Linux WAP Quick Install Guide
 date: 2020-01-24 12:26:00 -08:00
+categories:
+- Quick Install Guides
+tags:
+- Shell Script
+description: A short guide and script to get a wireless access point with or without
+  IP forwarding enabled on a linux host.
+blog_category: Quick Install Guides
 ---
 
 ## Requirements
