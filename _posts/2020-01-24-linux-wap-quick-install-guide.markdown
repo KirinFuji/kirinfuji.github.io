@@ -2,7 +2,7 @@
 title: Linux WAP Quick Install Guide
 date: 2020-01-24 12:26:00 -08:00
 categories:
-- Quick Install Guides
+- Quick Install Guide
 tags:
 - Shell Script
 description: A short guide and script to get a wireless access point with or without
