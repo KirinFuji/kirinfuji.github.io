@@ -21,22 +21,24 @@ sudo apt-get install hostapd dnsmasq
 
 # Written by Kirin
 
-# REPLACE THE FOLLOWING IN "<>" INCLUDING THE LT AND GT SYMBOLS
-wap_interface="<WLAN_INTERFACE>" ;
-wap_ssid="<WIFI_SSID>" ;
-wap_channel="<WIFI_CHANNEL>" ;
-wap_psk="<WIFI_PASSWORD>" ;
-
 # Example
 # wap_interface="wlan0" ;
 # wap_ssid="Default SSID" ;
 # wap_channel="7" ;
 # wap_psk="P@ssw0rd1" ;
-# wap_netaddr="192.168.1.0"
-# wap_subnet="255.255.255.0"
-# wap_ip="192.168.1.1"
-# wap_gw="192.168.1.1"
-# wap_dns="$wap_dns_server"
+# wap_netaddr="192.168.1.0" ;
+# wap_subnet="255.255.255.0" ;
+# wap_ip="192.168.1.1" ;
+# wap_gw="192.168.1.1" ;
+# wap_dns_fwd_target="1.1.1.1" ;
+# wap_dns_listenaddr="127.0.0.1" ;
+# wap_dhcp_r_start="192.168.1.150"
+# wap_dhcp_r_end="192.168.1.200"
+# wap_dhcp_r_subnet="$wap_subnet"
+# wap_dhcp_option_3_gw="$wap_gw"
+# wap_dhcp_option_6_dns="$wap_ip"
+# fwd_src_int
+fwd_src_int
 
 # Automated Script
 
@@ -45,7 +47,7 @@ iwconfig "$wap_interface" mode monitor ;
 ifconfig "$wap_interface" up ;
 
 mkdir -p /root/wap ;
-pushd /root/wap 2> /dev/null ;
+pushd /root/wap &> /dev/null ;
 
 # hostapd configuration
 echo '
@@ -66,20 +68,28 @@ wpa_passphrase="$wap_psk"
 # dnsmasq configuration
 echo '
 interface="$wap_interface"
-dhcp-range="$wap_octet123.150,$wap_octet123.200,255.255.255.0,12h"
-dhcp-option="3,$wap_ip"
-dhcp-option="6,$wap_ip"
-server="$wap_dns"
+dhcp-range="$dhcp_r_start,$dhcp_r_end,$dhcp_r_subnet,12h"
+dhcp-option="3,$wap_dhcp_option_3_gw"
+dhcp-option="6,$wap_dhcp_option_6_dns"
+server="$wap_dns_fwd_target"
 log-queries
 log-dhcp
-listen-address=127.0.0.1
+listen-address="$dns_listenaddr"
 ' > dnsmasq.conf ;
 
-ifconfig "$wap_interface" up "$wap_ip" netmask "$wap_subnet"
-route add -net "$wap_netaddr" netmask "$wap_subnet" gw "$wap_ip"
+ifconfig "$wap_interface" up "$wap_ip" netmask "$wap_subnet" ;
+route add -net "$wap_netaddr" netmask "$wap_subnet" gw "$wap_ip" ;
 
-dnsmasq -C dnsmasq.conf -d
-hostapd hostapd.conf
+hostapd hostapd.conf ;
+dnsmasq -C dnsmasq.conf -d 
 
+popd &> /dev/null
+
+iptables --table nat --append POSTROUTING --out-interface "$fwd_dst_int" -j MASQUERADE
+iptables --append FORWARD --in-interface "$fwd_src_int" -j ACCEPT
+
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+exit 0
 {% endhighlight %}
 
