@@ -62,32 +62,32 @@ mkdir -p /root/wap ;
 pushd /root/wap &> /dev/null ;
 
 # hostapd configuration
-echo '
-interface="$wap_interface"
+echo "
+interface=$wap_interface
 driver=nl80211
-ssid="$wap_ssid"
+ssid=$wap_ssid
 hw_mode=g
-channel="$wap_channel"
+channel=$wap_channel
 macaddr_acl=0
 ignore_broadcast_ssid=0
 auth_algs=1
 wpa=2
 wpa_key_mgmt=WPA-PSK
 rsn_pairwise=TKIP
-wpa_passphrase="$wap_psk"
-' > hostapd.conf ;
+wpa_passphrase=$wap_psk
+" > hostapd.conf ;
 
 # dnsmasq configuration
-echo '
-interface="$wap_interface"
-dhcp-range="$dhcp_r_start,$dhcp_r_end,$dhcp_r_subnet,12h"
-dhcp-option="3,$wap_dhcp_option_3_gw"
-dhcp-option="6,$wap_dhcp_option_6_dns"
-server="$wap_dns_fwd_target"
+echo "
+interface=$wap_interface
+dhcp-range=$dhcp_r_start,$dhcp_r_end,$dhcp_r_subnet,12h
+dhcp-option=3,$wap_dhcp_option_3_gw
+dhcp-option=6,$wap_dhcp_option_6_dns
+server=$wap_dns_fwd_target
 log-queries
 log-dhcp
-listen-address="$dns_listenaddr"
-' > dnsmasq.conf ;
+listen-address=$dns_listenaddr
+" > dnsmasq.conf ;
 
 ifconfig "$wap_interface" up "$wap_ip" netmask "$wap_subnet" ;
 route add -net "$wap_netaddr" netmask "$wap_subnet" gw "$wap_ip" ;
