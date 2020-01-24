@@ -1,7 +1,7 @@
 ---
-title: Security
+title: Quick Install Guides
 date: 2020-01-22 03:11:00 -08:00
-Field name: 
+blog_category: Quick Install Guides
 ---
 
-Information security, penetration testing, ethical hacking, and general cyber security related content.
+Guides often containing no more then copy paste scripts to, fully automate the installation of software and other miscellaneous automation processes, and provide brief usage information on the referenced software.
