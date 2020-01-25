@@ -15,8 +15,8 @@ Linux Cheat is a command line utility designed for linux administrators who ofte
 ## Resources
 
 [https://github.com/cheat/cheat/](https://github.com/cheat/cheat/)  
-[https://github.com/cheat/cheat/releases/download/3.3.0/cheat-linux-amd64  ](https://github.com/cheat/cheat/releases)
-[https://github.com/cheat/cheat/releases/download/3.3.0/cheat-linux-arm7](https://github.com/cheat/cheat/releases)  
+[https://github.com/cheat/cheat/releases/download/3.3.0/cheat-linux-amd64  ](https://github.com/cheat/cheat/releases/download/3.3.0/cheat-linux-amd64)
+[https://github.com/cheat/cheat/releases/download/3.3.0/cheat-linux-arm7](https://github.com/cheat/cheat/releases/download/3.3.0/cheat-linux-arm7)  
 
 ## Setup
 You will need to figure out your os (arm[5,6,7],amd64,etc...) and will need to right click copy the URL destination for the appropriate release executable from above (or get the others from the repo).
