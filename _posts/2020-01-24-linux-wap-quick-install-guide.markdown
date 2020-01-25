@@ -42,16 +42,17 @@ wap_netaddr="192.168.1.0" ;
 wap_subnet="255.255.255.0" ;
 wap_ip="192.168.1.1" ;
 wap_gw="192.168.1.1" ;
-wap_dns_fwd_target="1.1.1.1" ;
-wap_dns_listenaddr="127.0.0.1" ;
-wap_wap_dhcp_r_start="192.168.1.150" ;
-wap_wap_dhcp_r_end="192.168.1.200" ;
-wap_wap_dhcp_r_subnet="$wap_subnet" ;
-wap_dhcp_option_3_gw="$wap_gw" ;
-wap_dhcp_option_6_dns="$wap_ip" ;
+dnsd_listenaddr="127.0.0.1" ;
+dnsd_fwd_target="1.1.1.1" ;
+dhcpd_r_start="192.168.1.150" ;
+dhcpd_r_end="192.168.1.200" ;
+dhcpd_r_subnet="$wap_subnet" ;
+dhcpd_option_3_gw="$wap_gw" ;
+dhcpd_option_6_dns="$wap_ip" ;
 fwd_packets="0" ; # Set to 1 to enable packet forwarding.
 fwd_src_int="$wap_interface" ;
 fwd_dst_int="eth0" ;
+enable_autostart="0" ;
 
 # Automated Script
 
@@ -84,13 +85,13 @@ wpa_passphrase=$wap_psk
 # Setup dnsmasq configuration
 echo "
 interface=$wap_interface
-dhcp-range=$wap_dhcp_r_start,$wap_dhcp_r_end,$wap_dhcp_r_subnet,12h
-dhcp-option=3,$wap_dhcp_option_3_gw
-dhcp-option=6,$wap_dhcp_option_6_dns
-server=$wap_dns_fwd_target
+dhcp-range=$dhcpd_r_start,$dhcpd_r_end,$dhcpd_r_subnet,12h
+dhcp-option=3,$dhcpd_option_3_gw
+dhcp-option=6,$dhcpd_option_6_dns
+server=$dnsd_fwd_target
 log-queries
 log-dhcp
-listen-address=$wap_dns_listenaddr
+listen-address=$dnsd_listenaddr
 " > dnsmasq.conf ;
 
 # Setup routing table
@@ -98,8 +99,8 @@ ifconfig "$wap_interface" up "$wap_ip" netmask "$wap_subnet" ;
 route add -net "$wap_netaddr" netmask "$wap_subnet" gw "$wap_ip" ;
 
 # Run Daemons
-hostapd -P hostapd.pid -B hostapd.conf ;
-dnsmasq -x dnsmasq.pid -C dnsmasq.conf ;
+hostapd -P $conf_dir/hostapd.pid -B $conf_dir/hostapd.conf ;
+dnsmasq --pid-file=$conf_dir/dnsmasq.pid -C $conf_dir/dnsmasq.conf ;
 
 popd &> /dev/null ;
 
@@ -111,8 +112,21 @@ iptables --append FORWARD --in-interface "$fwd_src_int" -j ACCEPT ;
 
 echo 1 > /proc/sys/net/ipv4/ip_forward ;
 
-fi ;
+fi
+
+if [ "$enable_autostart" = "1" ]; then
+    if [ ! -f /etc/init.d/start-wap-services.sh ]; then
+        echo '
+        !#/bin/sh 
+        hostapd -P $conf_dir/hostapd.pid -B $conf_dir/hostapd.conf ;
+        dnsmasq --pid-file=$conf_dir/dnsmasq.pid -C $conf_dir/dnsmasq.conf
+        ' > /etc/init.d/start-wap-services.sh ;
+        chmod +x /etc/init.d/start-wap-services.sh ;
+        update-rc.d start-wap-services.sh defaults ;
+    else
+        echo 'Autostart file (/etc/init.d/start-wap-services.sh) already exists.'
+    fi
+fi
 
 exit 0
-
 {% endhighlight %}
