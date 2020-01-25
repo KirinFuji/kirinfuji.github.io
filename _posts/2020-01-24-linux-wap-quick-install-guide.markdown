@@ -98,8 +98,8 @@ ifconfig "$wap_interface" up "$wap_ip" netmask "$wap_subnet" ;
 route add -net "$wap_netaddr" netmask "$wap_subnet" gw "$wap_ip" ;
 
 # Run Daemons
-hostapd hostapd.conf ;
-dnsmasq -C dnsmasq.conf -d ;
+hostapd -P hostapd.pid -B hostapd.conf ;
+dnsmasq -x dnsmasq.pid -C dnsmasq.conf ;
 
 popd &> /dev/null ;
 
