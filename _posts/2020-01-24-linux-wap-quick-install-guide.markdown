@@ -116,13 +116,15 @@ fi
 
 if [ "$enable_autostart" = "1" ]; then
     if [ ! -f /etc/init.d/start-wap-services.sh ]; then
-        echo '
-        !#/bin/sh 
-        hostapd -P $conf_dir/hostapd.pid -B $conf_dir/hostapd.conf ;
-        dnsmasq --pid-file=$conf_dir/dnsmasq.pid -C $conf_dir/dnsmasq.conf
-        ' > /etc/init.d/start-wap-services.sh ;
-        chmod +x /etc/init.d/start-wap-services.sh ;
-        update-rc.d start-wap-services.sh defaults ;
+	
+echo '
+!#/bin/sh 
+hostapd -P $conf_dir/hostapd.pid -B $conf_dir/hostapd.conf ;
+dnsmasq --pid-file=$conf_dir/dnsmasq.pid -C $conf_dir/dnsmasq.conf
+' > /etc/init.d/start-wap-services.sh ;
+chmod +x /etc/init.d/start-wap-services.sh ;
+update-rc.d start-wap-services.sh defaults ;
+
     else
         echo 'Autostart file (/etc/init.d/start-wap-services.sh) already exists.'
     fi
