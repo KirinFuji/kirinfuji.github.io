@@ -113,9 +113,20 @@ fi
 if [ "$enable_autostart" = "1" ]; then
     if [ ! -f /etc/init.d/start-wap-services.sh ]; then
 	
-echo "!#/bin/sh 
+echo "!#/bin/sh
+# Daemon Startup
 hostapd -P $conf_dir/hostapd.pid -B $conf_dir/hostapd.conf ;
 dnsmasq --pid-file=$conf_dir/dnsmasq.pid -C $conf_dir/dnsmasq.conf" > /etc/init.d/start-wap-services.sh ;
+
+        if [ "$fwd_packets" = "1" ]; then
+
+echo '# Packet Forwarding' >> /etc/init.d/start-wap-services.sh
+echo "iptables --table nat --append POSTROUTING --out-interface $fwd_dst_int -j MASQUERADE ;
+iptables --append FORWARD --in-interface $fwd_src_int -j ACCEPT ;
+echo 1 > /proc/sys/net/ipv4/ip_forward" >> /etc/init.d/start-wap-services.sh  ;
+
+        fi
+
 chmod +x /etc/init.d/start-wap-services.sh ;
 update-rc.d start-wap-services.sh defaults ;
 
@@ -123,6 +134,4 @@ update-rc.d start-wap-services.sh defaults ;
         echo 'Autostart file (/etc/init.d/start-wap-services.sh) already exists.'
     fi
 fi
-
-exit 0
 {% endhighlight %}
