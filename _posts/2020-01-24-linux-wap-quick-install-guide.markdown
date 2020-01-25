@@ -66,8 +66,7 @@ mkdir -p "$conf_dir" ;
 pushd "$conf_dir" &> /dev/null ;
 
 # Setup hostapd configuration
-echo "
-interface=$wap_interface
+echo "interface=$wap_interface
 driver=nl80211
 ssid=$wap_ssid
 hw_mode=g
@@ -79,20 +78,17 @@ wpa=2
 wpa_key_mgmt=WPA-PSK
 wpa_pairwise=TKIP
 rsn_pairwise=CCMP
-wpa_passphrase=$wap_psk
-" > hostapd.conf ;
+wpa_passphrase=$wap_psk" > hostapd.conf ;
 
 # Setup dnsmasq configuration
-echo "
-interface=$wap_interface
+echo "interface=$wap_interface
 dhcp-range=$dhcpd_r_start,$dhcpd_r_end,$dhcpd_r_subnet,12h
 dhcp-option=3,$dhcpd_option_3_gw
 dhcp-option=6,$dhcpd_option_6_dns
 server=$dnsd_fwd_target
 log-queries
 log-dhcp
-listen-address=$dnsd_listenaddr
-" > dnsmasq.conf ;
+listen-address=$dnsd_listenaddr" > dnsmasq.conf ;
 
 # Setup routing table
 ifconfig "$wap_interface" up "$wap_ip" netmask "$wap_subnet" ;
@@ -117,11 +113,9 @@ fi
 if [ "$enable_autostart" = "1" ]; then
     if [ ! -f /etc/init.d/start-wap-services.sh ]; then
 	
-echo '
-!#/bin/sh 
+echo "!#/bin/sh 
 hostapd -P $conf_dir/hostapd.pid -B $conf_dir/hostapd.conf ;
-dnsmasq --pid-file=$conf_dir/dnsmasq.pid -C $conf_dir/dnsmasq.conf
-' > /etc/init.d/start-wap-services.sh ;
+dnsmasq --pid-file=$conf_dir/dnsmasq.pid -C $conf_dir/dnsmasq.conf" > /etc/init.d/start-wap-services.sh ;
 chmod +x /etc/init.d/start-wap-services.sh ;
 update-rc.d start-wap-services.sh defaults ;
 
