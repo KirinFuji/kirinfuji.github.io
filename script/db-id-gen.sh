@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Written from scratch by KirinFuji
+
 # Dropbox ID Generator
 
 # REQUIRES THE FOLLOWING IN THE script DIRECTORY
