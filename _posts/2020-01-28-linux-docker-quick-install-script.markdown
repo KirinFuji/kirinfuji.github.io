@@ -25,7 +25,7 @@ The below code will install the following:
 -docker-compose
 
 
-```
+{% highlight shell %}
 #!/bin/bash
 
 # Written by Kirin
@@ -46,4 +46,4 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.25.3/docker-
 sudo chmod +x /usr/local/bin/docker-compose ;
 sudo docker-compose --version ;
 sudo echo "Finished." ;
-```
+{% endhighlight %}
