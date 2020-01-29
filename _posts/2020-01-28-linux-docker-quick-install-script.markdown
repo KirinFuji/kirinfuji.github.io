@@ -13,7 +13,7 @@ blog_category: Quick Install Guides
 
 Docker is a linux container daemon and container language. Containers are basically a portable application. Systems are built to run docker, docker is built to run containers, so in theory you get really good portability of your application. (Until docker gets forked to hell and everyone wants to maintain their own container daemon as you will see below.)
 
-### Installation
+### CentOS 7
 
 The below code will install the following:  
 -yum-utils  
@@ -49,7 +49,7 @@ sudo echo "Finished." ;
 {% endhighlight %}
 
 
-### Centos 8
+### CentOS 8
 
 Unfortunately CentOS 8 ships with podman and seems to be discouraging use of docker. In my case I already had a few projects built with docker-compose and did not want to learn a new hosting method right now. Here is how I got docker + docker-compose working on CentOS 8.
 
