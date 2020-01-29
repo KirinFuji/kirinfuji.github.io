@@ -91,6 +91,21 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.25.3/docker-
 sudo chmod +x /usr/local/bin/docker-compose ;
 sudo docker-compose --version ;
 sudo echo "Finished." ;
+
+# Unfortunately something about docker on CentOS 8 with FirewallD is broken (despite it working somewhat on CentOS 7 with minor quirks) so we will have to turn off firewalld or your containers will simply be firewalled both directions.
+
+sudo systemctl stop firewalld
+sudo systemctl disable firewalld
+
+# Im not going to cover setting up a basic iptables firewall but its not hard the net is full of them but you should use a firewall if your server is exposed.
+
 {% endhighlight %}
 
 I use a docker-compose pi-hole project for my networks DNS Sinkhole and a few IRC bots and really like CentOS, just trying CentOS 8 out now and learning that podman ships with it I suppose ill create a podman pi-hole container when I can get around to it. (At a glance I think podman can run docker containers, however I have my doubts about docker-compose containers.
+
+After all the above I went to start my container and something was already listening on port 53. Apparently my CentOS 8 came with systemd-resolved running so I had to turn that off too.
+
+```
+sudo systemctl stop systemd-resolved
+sudo systemctl disable systemd-resolved
+```
