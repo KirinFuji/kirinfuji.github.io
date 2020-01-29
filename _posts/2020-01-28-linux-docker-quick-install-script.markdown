@@ -15,14 +15,14 @@ Docker is a linux container daemon and container language. Containers are basica
 
 ### Installation
 
-The below code will install the following:
--yum-utils
--device-mapper-persistent-data
--lvm2
--docker-ce
--docker-ce-cli
--containerd.io
--docker-compose
+The below code will install the following:  
+-yum-utils  
+-device-mapper-persistent-data  
+-lvm2  
+-docker-ce  
+-docker-ce-cli  
+-containerd.io  
+-docker-compose  
 
 
 {% highlight shell %}
