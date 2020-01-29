@@ -1,5 +1,5 @@
 ---
-title: Linux Docker Quick Install Script
+title: Linux Docker Quick Install Guide
 date: 2020-01-28 23:47:00 -08:00
 categories:
 - Quick Install Guide
@@ -15,7 +15,7 @@ Docker is a linux container daemon and container language. Containers are basica
 
 ### Installation
 
-The below code will install the following:
+The below code will install the following:  
 -yum-utils  
 -device-mapper-persistent-data  
 -lvm2  
@@ -101,7 +101,7 @@ sudo systemctl disable firewalld
 
 {% endhighlight %}
 
-I use a docker-compose pi-hole project for my networks DNS Sinkhole and a few IRC bots and really like CentOS, just trying CentOS 8 out now and learning that podman ships with it I suppose ill create a podman pi-hole container when I can get around to it. (At a glance I think podman can run docker containers, however I have my doubts about docker-compose containers.
+I use a docker-compose pi-hole project for my networks DNS Sinkhole and a few IRC bots and really like CentOS, just trying CentOS 8 out now and learning that podman ships with it I suppose ill create a podman pi-hole container when I can get around to it. (At a glance I think podman can run docker containers, however I have my doubts about docker-compose containers.)
 
 After all the above I went to start my container and something was already listening on port 53. Apparently my CentOS 8 came with systemd-resolved running so I had to turn that off too.
 
