@@ -5,7 +5,7 @@ categories:
 - Quick Install Guide
 tags:
 - Shell Script
-description: How to get setup with docker and docker compose.
+description: How to get setup with docker and docker compose. CentOS 7 & CentOS 8
 blog_category: Quick Install Guides
 ---
 
@@ -15,7 +15,7 @@ Docker is a linux container daemon and container language. Containers are basica
 
 ### Installation
 
-The below code will install the following:  
+The below code will install the following:
 -yum-utils  
 -device-mapper-persistent-data  
 -lvm2  
@@ -47,3 +47,50 @@ sudo chmod +x /usr/local/bin/docker-compose ;
 sudo docker-compose --version ;
 sudo echo "Finished." ;
 {% endhighlight %}
+
+
+### Centos 8
+
+Unfortunately CentOS 8 ships with podman and seems to be discouraging use of docker. In my case I already had a few projects built with docker-compose and did not want to learn a new hosting method right now. Here is how I got docker + docker-compose working on CentOS 8.
+
+The below code will install the following(and any dependencies):  
+-device-mapper-persistent-data  
+-lvm2  
+-docker-ce  
+-docker-ce-cli  
+-containerd.io  
+-docker-compose  
+
+Will remove the following(and any dependencies):  
+-podman  
+
+Will disable the following services:  
+-firewalld  
+
+Please be advised this will leave you with a blank iptables firewall with everything open.
+
+{% highlight shell %}
+#!/bin/bash
+
+# Written by Kirin
+
+# Run the below to Install fresh docker on centos 8
+sudo dnf remove -y podman ;
+sudo dnf install -y device-mapper-persistent-data lvm2 ;
+sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo ;
+sudo dnf -y --nobest install docker-ce docker-ce-cli containerd.io ;
+sudo systemctl start docker ;
+sudo systemctl enable docker ;
+
+
+# Run the below to Install fresh docker-compose on centos 8 (add-on)
+
+# Note: You will want to go here: (https://github.com/docker/compose/releases/) to see if there is a more up-to-date version. Latest version as of 1-28-2020 is "1.25.3". The code will figure out your linux version, just replace "1.25.3" with the new version number.
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose ;
+sudo chmod +x /usr/local/bin/docker-compose ;
+sudo docker-compose --version ;
+sudo echo "Finished." ;
+{% endhighlight %}
+
+I use a docker-compose pi-hole project for my networks DNS Sinkhole and a few IRC bots and really like CentOS, just trying CentOS 8 out now and learning that podman ships with it I suppose ill create a podman pi-hole container when I can get around to it. (At a glance I think podman can run docker containers, however I have my doubts about docker-compose containers.
