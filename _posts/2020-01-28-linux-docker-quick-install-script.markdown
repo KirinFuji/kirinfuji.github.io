@@ -11,7 +11,7 @@ blog_category: Quick Install Guides
 
 ### Introduction
 
-Docker is a linux container daemon and container language. Containers are basically a portable application. Systems are built to run docker, docker is built to run containers, so in theory you get really good portability of your application. (Until docker gets forked to hell and everyone wants to maintain their own container daemon lol)
+Docker is a linux container daemon and container language. Containers are basically a portable application. Systems are built to run docker, docker is built to run containers, so in theory you get really good portability of your application. (Until docker gets forked to hell and everyone wants to maintain their own container daemon as you will see below.)
 
 ### Installation
 
