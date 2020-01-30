@@ -23,6 +23,7 @@ Then we need to be able to send data and capture what our data gets responded to
 
 In this example I created a simple if-then logic to see if the data we get back starts with 'SSH-2.0-' and if we do then we send back 'SSH_MSG_KEXDH_INIT' which is part of the SSH protocol handshake. This data is being sent and received over the same initial tcp connection we opened.
 
+### Sending Bogus data to see what happens
 If you grab the code and set it to port 22 and use -d and enter some bogus data, say 'asdasdasd' to my surprise instead of just hanging up on us with a TCP RST packet, they politely told us the data we sent was invalid and kept the connection open:
 ```
 python basic-tcp-client.py -t myvps.example.com -p 22 -d 'asdasdasd'
