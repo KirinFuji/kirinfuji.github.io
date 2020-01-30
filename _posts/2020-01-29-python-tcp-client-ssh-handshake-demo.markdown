@@ -3,9 +3,10 @@ title: Python TCP Client - SSH Handshake Demo
 date: 2020-01-29 23:41:00 -08:00
 permalink: "/posts/python-tcp-client"
 categories:
-- Ethical Hacking
+- Security
 tags:
-- python
+- Ethical Hacking
+- Python
 description: Python TCP Client with some basic functions and small ssh handshake demo.
 blog_category: Security
 ---
