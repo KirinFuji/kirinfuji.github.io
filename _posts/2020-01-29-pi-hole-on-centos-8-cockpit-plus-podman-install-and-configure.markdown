@@ -1,5 +1,5 @@
 ---
-title: Pi-Hole on Centos 8
+title: Pi-Hole on CentOS 8
 date: 2020-01-29 15:56:00 -08:00
 permalink: "/posts/pihole-centos8-setup"
 categories:
