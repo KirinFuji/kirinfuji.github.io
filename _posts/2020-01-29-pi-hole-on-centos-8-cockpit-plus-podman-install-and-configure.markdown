@@ -3,7 +3,7 @@ title: Pi-Hole on Centos 8 Quick Setup Guide
 date: 2020-01-29 15:56:00 -08:00
 permalink: "/posts/pihole-centos8-setup"
 categories:
-- Walkthrough
+- Quick Install Guide
 description: After fighting with the command line for a bit with the new subsystems
   I am unfamiliar with and learning CentOS 8 comes with Cockpit, a management GUI,
   I got it working quite easily.
