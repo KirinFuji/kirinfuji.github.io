@@ -7,7 +7,7 @@ categories:
 tags:
 - python
 description: Python TCP Client with some basic functions and small ssh handshake demo.
-blog_category: Ethical Hacking
+blog_category: Security
 ---
 
 ## Summary
