@@ -1,5 +1,5 @@
 ---
-title: Pi-Hole on Centos 8 (cockpit + podman) Install & Configure
+title: Pi-Hole on Centos 8 Quick Setup Guide
 date: 2020-01-29 15:56:00 -08:00
 permalink: "/posts/pihole-centos8-setup"
 categories:
@@ -12,7 +12,7 @@ blog_category: Walkthrough
 
 ### Description
 
-{{% page.description %}}
+{{% post.description %}}
 
 ### Introduction
 
@@ -54,6 +54,11 @@ Setting password: _gWhZDxA
 ```
 
 Copy the password you found as you will need it for the pihole web interface.  
+
+Note: You can also set a password via podman like this:
+```
+sudo podman exec test pihole -a -p <PASSWORD>
+```
 
 Now go to your pihole web interface:
 ```
@@ -113,6 +118,9 @@ https://www.stopforumspam.com/downloads/toxic_domains_whole.txt
 ```
 
 My DNS flow looks like this:  
+
+Clients -> Pi-Hole -> Router -> Upstream DNS/TLS
+
 DHCP: Assigns pihole server ip to DHCP clients.  
 Pihole: Blocks domains on blacklist and forwards all other requests to firewall DNS resolver.  
 Firewall: Registers hostnames and reverse lookups in its own resolver DB for all connected networks and forwards all other requests to an upstream DNS/TLS resolver.  
