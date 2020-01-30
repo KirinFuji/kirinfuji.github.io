@@ -1,5 +1,5 @@
 ---
-title: Linux Docker Quick Install Guide
+title: Linux Docker CentOS 7 & 8
 date: 2020-01-28 23:47:00 -08:00
 categories:
 - Quick Install Guide
@@ -109,3 +109,5 @@ After all the above I went to start my container and something was already liste
 sudo systemctl stop systemd-resolved
 sudo systemctl disable systemd-resolved
 ```
+
+Edit: Tried docker on CentOS 8 It was not worth the headache and system teardown of supported packages and methodologies so I went with podman. Can read up on it [here](https://blog.kfuji.net/posts/pihole-centos8-setup) its impressively simple now.
