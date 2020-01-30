@@ -12,7 +12,7 @@ blog_category: Walkthrough
 
 ### Description
 
-{% page.description %}
+{% post.description %}
 
 ### Introduction
 
