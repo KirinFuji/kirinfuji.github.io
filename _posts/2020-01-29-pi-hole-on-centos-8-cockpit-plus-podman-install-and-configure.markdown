@@ -2,6 +2,7 @@
 title: Pi-Hole on Centos 8 (cockpit + podman) Install & Configure
 date: 2020-01-29 15:56:00 -08:00
 permalink: "/posts/pihole-centos8-setup"
+published: false
 categories:
 - Walkthrough
 description: After fighting with the command line for a bit with the new subsystems
