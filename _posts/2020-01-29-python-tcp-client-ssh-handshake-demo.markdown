@@ -90,7 +90,11 @@ Response is:
 
 #!/usr/bin/python
 
-import sys, getopt, socket, ssl
+# Written by Kirin
+
+# TCP Client/Packet Generator send arguments for host, port, data (packet payload).
+
+import sys, getopt, socket
 
     # Start Variable Setup #
 
