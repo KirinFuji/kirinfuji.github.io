@@ -7,7 +7,7 @@ categories:
 description: After fighting with the command line for a bit with the new subsystems
   I am unfamiliar with and learning CentOS 8 comes with Cockpit, a management GUI,
   I got it working quite easily.
-blog_category: Walkthrough
+blog_category: Quick Install Guides
 ---
 
 ### Description
