@@ -65,7 +65,7 @@ Now go to your pihole web interface:
 http://<IP_OF_SERVER>/admin
 ```
 
-At this point you should have a functioning pi-hole, be sure to configure it to your liking however. I will describe how I am using it below:
+At this point you should have a functioning pi-hole, be sure to configure it to your liking. I will describe how I am using it below:
 
 Enter the password from before and go to settings.
 
