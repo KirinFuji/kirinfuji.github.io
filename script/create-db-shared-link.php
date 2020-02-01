@@ -1,10 +1,12 @@
 #!/usr/bin/env php
 
+<?php
+
 # Dropbox API Script to create a shared link
 
 # Requires php-json and php
 
-<?php
+
 
 $db_auth = file_get_contents('./db_token.var');
 $db_auth = str_replace("\n", "", $db_auth); 
