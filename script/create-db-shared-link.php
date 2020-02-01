@@ -2,6 +2,8 @@
 
 # Dropbox API Script to create a shared link
 
+# Requires php-json and php
+
 <?php
 
 $db_auth = file_get_contents('./db_token.var');
