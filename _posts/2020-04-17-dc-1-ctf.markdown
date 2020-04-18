@@ -1,0 +1,27 @@
+---
+title: DC-1 CTF
+date: 2020-04-17 19:40:00 -07:00
+permalink: "/ctf/dc-1"
+categories:
+- CTF
+tags:
+- Ethical Hacking
+author: Kirin
+description: Walkthrough of DC-1 Vulnerable VM
+blog_category: Security
+---
+
+
+Walkthrough:
+
+Download the VM. Link in resources. Import into VirtualBox and launch it with bridged networking. Ensure your KaliVM is also bridged networking.
+
+I ran the following to discover local devices:
+    netdiscover -c 20 -r 10.0.0.0/24
+
+[netdiscover.PNG](/uploads/netdiscover.PNG)
+
+
+
+Resources:
+https://www.vulnhub.com/entry/dc-1,292/
