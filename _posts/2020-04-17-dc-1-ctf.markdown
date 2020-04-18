@@ -19,8 +19,7 @@ Download the VM. Link in resources. Import into VirtualBox and launch it with br
 I ran the following to discover local devices:
     netdiscover -c 20 -r 10.0.0.0/24
 
-[netdiscover.PNG](/uploads/netdiscover.PNG)
-
+![net_discover](/uploads/netdiscover.PNG "netdiscover")
 
 
 Resources:
