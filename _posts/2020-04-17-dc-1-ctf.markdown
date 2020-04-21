@@ -2,6 +2,7 @@
 title: DC-1 CTF
 date: 2020-04-17 19:40:00 -07:00
 permalink: "/ctf/dc-1"
+published: false
 categories:
 - CTF
 tags:
