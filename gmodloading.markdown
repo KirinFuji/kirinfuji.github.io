@@ -3,7 +3,7 @@ title: Loading Page
 date: 2020-05-20 09:41:00 -07:00
 permalink: "/loadingscreen"
 Field name: 
-layout: basic
+layout: noheader
 ---
 
 # Welcome to Corrine's Sandbox
