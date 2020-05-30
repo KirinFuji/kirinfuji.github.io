@@ -30,16 +30,16 @@ Because you will be going between FreeNAS/HTTP FreeNAS/SSH AnotherLinuxBox/SSH I
 ### FreeNAS/SSH/nas
 
 1. Run the following (jls) and obtain your Jail ID (JID).
-
+```
     root@nas1[~]# jls
        JID  IP Address      Hostname                      Path
         16                  jenkins                       /mnt/ZFS_00/iocage/jails/jenkins/root
-
+```
 1. Run the following (jexec <JID> tcsh) to spawn a shell.
-
+```
     root@nas1[~]# jexec 16 tcsh
     root@jenkins:/ #
-
+```
 ### FreeNAS/SSH/Jenkins
 
 1. Change directory:
@@ -50,10 +50,11 @@ Because you will be going between FreeNAS/HTTP FreeNAS/SSH AnotherLinuxBox/SSH I
 
 ### AnotherLinuxBox/SSH
 
-1. For this part your going to need a machine that allows you to run certbot because for whatever reason it would spit out its not supported on this system. I SSH'd into a linux box and "sudo yum install certbot".
+1. For this part your going to need a machine that allows you to run certbot because for whatever reason it would spit out its not supported on this system. I SSH'd into a linux box and `sudo yum install certbot`.
 
-2. Run the following (certbot certonly --manual -d jenkins.yourdomain.net) when it says "Press ENTER to continue." DONT DO IT.
+2. Run the following `certbot certonly --manual -d jenkins.yourdomain.net` when it says "Press ENTER to continue." DONT DO IT.
 
+```
     [root@linuxbox ~]# certbot certonly --manual -d jenkins.yourdomain.net
     Saving debug log to /var/log/letsencrypt/letsencrypt.log
     Plugins selected: Authenticator manual, Installer None
@@ -81,6 +82,7 @@ Because you will be going between FreeNAS/HTTP FreeNAS/SSH AnotherLinuxBox/SSH I
     
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     Press Enter to Continue (DONT!)
+```
 
 ### FreeNAS/SSH/Jenkins
 
@@ -88,29 +90,31 @@ Because you will be going between FreeNAS/HTTP FreeNAS/SSH AnotherLinuxBox/SSH I
 
 2. Edit it so that the values of lines 43 & 44 represent what the certbot prompt showed you.
 
+```
                     #Lets Encrypt Challenge
                     location /.well-known/acme-challenge/i_asdasdasdasdasdasdasdasd {
                             return 200 "i_asdfsdgdfgsdfasdasdasdasfasd.-asdasdasdasdasdasdasdasdasd";
                     }
+```
 
-1. Restart nginx (service nginx restart)
+1. Restart nginx `service nginx restart`
 
 ### Your Network
 
 1. Setup port forwards or whatever networking you need to so that the PUBLIC INTERNET can reach jenkins.yourdomain.net/.well-known/acme-challenge/i_asdasdasdasdasdasdasdasd on your exact jenkins build here.
 
-\(Don't worry this is at most temporary for 5 minutes.)
+(Don't worry this is at most temporary for 5 minutes.)
 
 1. Test step 14 with https://reqbin.com/curl
+`curl http://jenkins.yourdomain.net/.well-known/acme-challenge/i_asdasdasdasdasdasdasdasd`
 
-    curl http://jenkins.yourdomain.net/.well-known/acme-challenge/i_asdasdasdasdasdasdasdasd
-
-1. You should get back "i_asdfsdgdfgsdfasdasdasdasfasd.-asdasdasdasdasdasdasdasdasd"
+1. You should get back `i_asdfsdgdfgsdfasdasdasdasfasd.-asdasdasdasdasdasdasdasdasd`
 
 ### AnotherLinuxBox/SSH
 
 1. If all went well, go back to and press ENTER!
 
+```
     Waiting for verification...
     Cleaning up challenges
     
@@ -127,6 +131,7 @@ Because you will be going between FreeNAS/HTTP FreeNAS/SSH AnotherLinuxBox/SSH I
     
        Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
        Donating to EFF:                    https://eff.org/donate-le
+```
 
 ### Your Network
 
@@ -136,19 +141,20 @@ Feel free to take down any networking or forwarding you did now if this is not g
 
 1. Back in the Jenkins Jail now. Move the certificates (I used 2 WinSCP sessions to copy the certs from AnotherLinuxBox to FreeNAS) you just generated from your linuxbox@/etc/letsencrypt/archive/jenkins.yourdomain.net/ to your JenkinsJail@/usr/local/etc/nginx/ssl
 
+```
     root@jenkins:/usr/local/etc/nginx/ssl # ls
     cert1.pem chain1.pem fullchain1.pem privkey1.pem
+```
 
 1. while in the /usr/local/etc/nginx/ssl directory, run this to generate the dhparam4096.pem:
-
-    openssl dhparam -out dhparam4096.pem 4096
+`openssl dhparam -out dhparam4096.pem 4096`
 
 1. Grab the nginx.conf over at [nginx.conf.txt](/uploads/nginx.conf.txt)
 
-2. Ctrl\+h replace "jenkins.yourdomain.net" with whatever your host is gonna be. Make sure it resolves to the IP of your Jenkins Jail.
+2. Ctrl\+h replace `jenkins.yourdomain.net` with whatever your host is gonna be. Make sure it resolves to the IP of your Jenkins Jail.
 
-3. Write your edited nginx.conf to /usr/local/etc/nginx/nginx.conf
+3. Write your edited `nginx.conf` to `/usr/local/etc/nginx/nginx.conf`
 
-4. Restart nginx (service nginx restart)
+4. Restart nginx `service nginx restart`
 
 5. Test it out! That should be it!? (I may have forgotten something!!)
