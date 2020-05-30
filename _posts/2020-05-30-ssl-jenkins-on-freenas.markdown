@@ -93,6 +93,9 @@ Press Enter to Continue (DONT!)
 ### Your Network
 
 14. Setup port forwards or whatever networking you need to so that the PUBLIC INTERNET can reach jenkins.yourdomain.net/.well-known/acme-challenge/i_asdasdasdasdasdasdasdasd on your exact jenkins build here.
+
+(Don't worry this is at most temporary for 5 minutes.)
+
 15. Test step 14 with https://reqbin.com/curl
 ```
 curl http://jenkins.yourdomain.net/.well-known/acme-challenge/i_asdasdasdasdasdasdasdasd
@@ -120,6 +123,9 @@ IMPORTANT NOTES:
    Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
    Donating to EFF:                    https://eff.org/donate-le
 ```
+### Your Network
+
+Feel free to take down any networking or forwarding you did now if this is not going to be a public Jenkins
 
 ### FreeNAS/SSH/Jenkins
 
