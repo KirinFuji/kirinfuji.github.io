@@ -13,7 +13,7 @@ blog_category: Service Hosting
 
 ## Setting up Jenkins on FreeNAS with SSL using lets encrypt (manual)
 
-This is a rough outline of the process I missed a few steps like creating the nginx/log directory that matches my nginx.conf and possibly others.
+This is a rough outline of the process. I missed a few steps like creating the nginx/log directory that matches my nginx.conf and possibly others.
 
 Because you will be going between FreeNAS/HTTP FreeNAS/SSH AnotherLinuxBox/SSH I will place a heading based on what box you should be in.
 
