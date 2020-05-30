@@ -19,23 +19,23 @@ Because you will be going between FreeNAS/HTTP FreeNAS/SSH AnotherLinuxBox/SSH I
 
 ### FreeNAS/HTTP
 
-1. Setup your FreeNas Box (ZFS Pools Etc).
+\1. Setup your FreeNas Box (ZFS Pools Etc).
 
-2. Install the Jenkins Plugin.
+\2. Install the Jenkins Plugin.
 
-3. Enable the SSH service with root login.
+\3. Enable the SSH service with root login.
 
-4. SSH into your FreeNas Box as root.
+\4. SSH into your FreeNas Box as root.
 
 ### FreeNAS/SSH/nas
 
-5. Run the following (jls) and obtain your Jail ID (JID).
+\5. Run the following (jls) and obtain your Jail ID (JID).
 ```
     root@nas1[~]# jls
        JID  IP Address      Hostname                      Path
         16                  jenkins                       /mnt/ZFS_00/iocage/jails/jenkins/root
 ```
-6. Run the following `jexec <JID> tcsh` to spawn a shell.
+\6. Run the following `jexec <JID> tcsh` to spawn a shell.
 ```
     root@nas1[~]# jexec 16 tcsh
     root@jenkins:/ #
@@ -43,15 +43,15 @@ Because you will be going between FreeNAS/HTTP FreeNAS/SSH AnotherLinuxBox/SSH I
 
 ### FreeNAS/SSH/Jenkins
 
-7. Change directory:
+\7. Change directory:
    `cd /usr/local/etc/nginx/`
 
-8. Install dependencies:
+\8. Install dependencies:
    `pkg install openssl nano`
 
 ### AnotherLinuxBox/SSH
 
-9. For this part your going to need a machine that allows you to run certbot because for whatever reason it would spit out its not supported on this system. I SSH'd into a linux box and `sudo yum install certbot`.
+\9. For this part your going to need a machine that allows you to run certbot because for whatever reason it would spit out its not supported on this system. I SSH'd into a linux box and `sudo yum install certbot`.
 
 10. Run the following `certbot certonly --manual -d jenkins.yourdomain.net` when it says "Press ENTER to continue." DONT DO IT.
 
