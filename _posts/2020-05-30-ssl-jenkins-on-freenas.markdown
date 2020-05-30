@@ -132,9 +132,9 @@ openssl dhparam -out dhparam4096.pem 4096
 
 20. Grab the nginx.conf over at [nginx.conf.txt](/uploads/nginx.conf.txt)
 21. Ctrl+h replace "jenkins.yourdomain.net" with whatever your host is gonna be. Make sure it resolves to the IP of your Jenkins Jail.
-16. Write your edited nginx.conf to /usr/local/etc/nginx/nginx.conf
-18. 
-
+22. Write your edited nginx.conf to /usr/local/etc/nginx/nginx.conf
+23. Restart nginx (service nginx restart)
+24. Test it out! That should be it!? (I may have forgotten something!!)
 
 
 
