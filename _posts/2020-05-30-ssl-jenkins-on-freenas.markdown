@@ -47,6 +47,7 @@ root@jenkins:/ #
 
 9. For this part your going to need a machine that allows you to run certbot because for whatever reason it would spit out its not supported on this system. I SSH'd into a linux box and "sudo yum install certbot".
 10. Run the following (certbot certonly --manual -d jenkins.yourdomain.net) when it says "Press ENTER to continue." DONT DO IT.
+
 ```
 [root@linuxbox ~]# certbot certonly --manual -d jenkins.yourdomain.net
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
