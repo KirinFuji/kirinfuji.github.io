@@ -35,7 +35,7 @@ Because you will be going between FreeNAS/HTTP FreeNAS/SSH AnotherLinuxBox/SSH I
        JID  IP Address      Hostname                      Path
         16                  jenkins                       /mnt/ZFS_00/iocage/jails/jenkins/root
 ```
-6. Run the following (jexec <JID> tcsh) to spawn a shell.
+6. Run the following `jexec <JID> tcsh` to spawn a shell.
 ```
     root@nas1[~]# jexec 16 tcsh
     root@jenkins:/ #
