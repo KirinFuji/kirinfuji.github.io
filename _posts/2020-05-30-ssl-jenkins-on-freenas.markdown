@@ -38,8 +38,10 @@ root@jenkins:/ #
 
 ### FreeNAS/SSH/Jenkins
 
-7. Change directory (cd /usr/local/etc/nginx/).
-8. Install dependencies (pkg install openssl nano).
+7. Change directory:
+```cd /usr/local/etc/nginx/```
+8. Install dependencies:
+```pkg install openssl nano```
 
 ### AnotherLinuxBox/SSH
 
