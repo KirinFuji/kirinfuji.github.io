@@ -40,6 +40,7 @@ Because you will be going between FreeNAS/HTTP FreeNAS/SSH AnotherLinuxBox/SSH I
     root@nas1[~]# jexec 16 tcsh
     root@jenkins:/ #
 ```
+
 ### FreeNAS/SSH/Jenkins
 
 7. Change directory:
@@ -105,8 +106,8 @@ Because you will be going between FreeNAS/HTTP FreeNAS/SSH AnotherLinuxBox/SSH I
 
 (Don't worry this is at most temporary for 5 minutes.)
 
-15. Test step 14 with https://reqbin.com/curl
-`curl http://jenkins.yourdomain.net/.well-known/acme-challenge/i_asdasdasdasdasdasdasdasd`
+15. Test step 14 with https://reqbin.com/curl  
+`curl http://jenkins.yourdomain.net/.well-known/acme-challenge/i_asdasdasdasdasdasdasdasd`  
 
 16. You should get back `i_asdfsdgdfgsdfasdasdasdasfasd.-asdasdasdasdasdasdasdasdasd`
 
