@@ -105,6 +105,7 @@ curl http://jenkins.yourdomain.net/.well-known/acme-challenge/i_asdasdasdasdasda
 ### AnotherLinuxBox/SSH
 
 17. If all went well, go back to and press ENTER!
+
 ```
 Waiting for verification...
 Cleaning up challenges
@@ -123,6 +124,7 @@ IMPORTANT NOTES:
    Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
    Donating to EFF:                    https://eff.org/donate-le
 ```
+
 ### Your Network
 
 Feel free to take down any networking or forwarding you did now if this is not going to be a public Jenkins
