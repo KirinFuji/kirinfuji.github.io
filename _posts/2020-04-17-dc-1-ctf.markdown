@@ -57,13 +57,11 @@ It took a little while but the droopescan results are back and we narrowed it do
 
 ![droopescan_results.PNG](/uploads/droopescan_results.PNG "droopescan_results")
 
-Quick searchsploit and... Its a Drupalgeddon VM!
+Quick searchsploit and...
 
+![drupalgeddon.PNG](/uploads/drupalgeddon.PNG "drupalgeddon")
 
-
-
-
-
+Its a Drupalgeddon VM!
 
 
 
