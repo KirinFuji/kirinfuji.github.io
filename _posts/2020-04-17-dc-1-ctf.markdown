@@ -47,9 +47,9 @@ Start a Nmap Advanced Scan to see more and check out port 80 with web browser + 
 
 ![Firefox_port_80.PNG](/uploads/Firefox_port_80.PNG "Firefox_port_80")
 
-![nmap_advanced_results.PNG](/uploads/nmap_advanced_results.PNG "nmap_advanced_results")
-
 Once the scan finishes we see its Drupal 7.x
+
+![nmap_advanced_results.PNG](/uploads/nmap_advanced_results.PNG "nmap_advanced_results")
 
 Now we run Droopescan to probe at it a bit. We can also run nikto while Droopescan is doing its thing. While all thats running, we poke around manually at robots.txt and find /admin and a few other interesting things but no access error when trying them.
 
@@ -107,7 +107,16 @@ Mess around with the MySQL database but nothing too useful as it only gets us dr
 ![dumping_tables.PNG](/uploads/dumping_tables.PNG "dumping_tables")
 ![dumped_user_table.PNG](/uploads/dumped_user_table.PNG "dumped_user_table")
 
+Checking the /home directory shows `flag4`.
 
+![flag4.PNG](/uploads/flag4.PNG "flag4")
 
+I was searching for stuff with find and noticed it was reveling root level files.
 
+![find has setuid.PNG](/uploads/find%20has%20setuid.PNG)
 
+So I ended up escalating with find set uid to get `thefinalflag.txt`. Could have also stolen the `/etc/shadow` and used john to see if it could crack it.
+
+![Final_escalation_root.PNG](/uploads/Final_escalation_root.PNG "Final_escalation_root")
+
+Now time to work on DC-2 !
