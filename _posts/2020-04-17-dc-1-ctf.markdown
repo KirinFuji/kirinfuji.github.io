@@ -85,11 +85,9 @@ And create a page that executes php. I created a webshell with the variable x.
 ![php web shell.PNG](/uploads/php%20web%20shell.PNG)
 
 Setup a metasploit multi/handler with a shell/reverse_tcp payload.
+And force DC-1 connect back to us.
 
 ![msf_shell_listener.PNG](/uploads/msf_shell_listener.PNG "msf_shell_listener")
-
-Have DC-1 connect back to us.
-
 ![reverse_shell.PNG](/uploads/reverse_shell.PNG "reverse_shell")
 
 
