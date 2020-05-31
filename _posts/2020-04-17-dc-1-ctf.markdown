@@ -63,7 +63,17 @@ Quick searchsploit and...
 
 Its a Drupalgeddon VM!
 
-We run the add admin sql injection exploit (34992.py) and add user:`drupalgeddon` password:`drupalgeddon` and its vulnerable!
+We run the add admin sql injection exploit (34992.py) and add user:`drupalgeddon` password:`drupalgeddon` and... its vulnerable.
+
+![phase1.PNG](/uploads/phase1.PNG "phase1")
+
+After logging in to the dashboard we see 2 users `Fred` & `admin` along with flag3:
+
+![dashboard.PNG](/uploads/dashboard.PNG "dashboard")
+![flag3.PNG](/uploads/flag3.PNG "flag3")
+
+I fired up hydra with rockyou.txt against the ssh we found earlier.
+
 
 
 
