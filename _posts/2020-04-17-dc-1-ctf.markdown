@@ -72,9 +72,25 @@ After logging in to the dashboard we see 2 users `Fred` & `admin` along with fla
 ![dashboard.PNG](/uploads/dashboard.PNG "dashboard")
 ![flag3.PNG](/uploads/flag3.PNG "flag3")
 
-I fired up hydra with rockyou.txt against the ssh we found earlier.
+I went and dug arround the admin settings and found I can enable PHP code execution!
 
+![phpfilter.PNG](/uploads/phpfilter.PNG "phpfilter")
 
+And allow admins to use it.
+
+![givephpformat.PNG](/uploads/givephpformat.PNG "givephpformat")
+
+And create a page that executes php. I created a webshell with the variable x.
+
+![php web shell.PNG](/uploads/php%20web%20shell.PNG)
+
+Setup a metasploit multi/handler with a shell/reverse_tcp payload.
+
+![msf_shell_listener.PNG](/uploads/msf_shell_listener.PNG "msf_shell_listener")
+
+Have DC-1 connect back to us.
+
+![reverse_shell.PNG](/uploads/reverse_shell.PNG "reverse_shell")
 
 
 
