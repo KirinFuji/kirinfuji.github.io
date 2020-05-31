@@ -63,6 +63,8 @@ Quick searchsploit and...
 
 Its a Drupalgeddon VM!
 
+We run the add admin sql injection exploit (34992.py) and add user:`drupalgeddon` password:`drupalgeddon` and its vulnerable!
+
 
 
 
