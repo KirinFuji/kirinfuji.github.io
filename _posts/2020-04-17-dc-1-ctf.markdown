@@ -36,7 +36,7 @@ And there we go its running.
 Run the following to discover local devices:
     netdiscover -c 20 -r 10.0.0.0/24
 
-![net_discover](/uploads/netdiscover.PNG "netdiscover")
+![netdiscover_results.PNG](/uploads/netdiscover_results.PNG "net_discover")
 
 There it is. Although ill be using the dns name for ease.
 
