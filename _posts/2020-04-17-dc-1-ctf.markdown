@@ -2,7 +2,6 @@
 title: DC-1 CTF
 date: 2020-04-17 19:40:00 -07:00
 permalink: "/ctf/dc-1"
-published: false
 categories:
 - CTF
 tags:
@@ -12,16 +11,57 @@ description: Walkthrough of DC-1 Vulnerable VM
 blog_category: Security
 ---
 
+DC-1 Is a capture the flag vulnerable VM.
 
-Walkthrough:
+Download the VM. Link in resources. 
 
-Download the VM. Link in resources. Import into VirtualBox and launch it with bridged networking. Ensure your KaliVM is also bridged networking.
+Resources:
+https://www.vulnhub.com/entry/dc-1,292/
 
-I ran the following to discover local devices:
+### Troubleshooting VM
+
+Tried to import it into VirtualBox first it will complain about the network card when you try to start it. Open settings and set your network card and set it to bridged.
+
+Then I was getting an error `Implementation of the USB 2.0 controller not found!` fixed by settings > usb > set to usb 1.1 controller.
+
+And there we go its running.
+
+![Proof_Running.PNG](/uploads/Proof_Running.PNG "Proof_Running")
+
+### Enumeration
+
+Run the following to discover local devices:
     netdiscover -c 20 -r 10.0.0.0/24
 
 ![net_discover](/uploads/netdiscover.PNG "netdiscover")
 
+There it is. Although ill be using the dns name for ease.
 
-Resources:
-https://www.vulnhub.com/entry/dc-1,292/
+Nmap fast scan to quickly see some ports quickly.
+
+![nmap_fast.PNG](/uploads/nmap_fast.PNG "nmap_fast")
+
+Start a Nmap Advanced Scan to see more and check out port 80 with web browser + burpsuite to find its a Drupal website.
+
+![Firefox_port_80.PNG](/uploads/Firefox_port_80.PNG "Firefox_port_80")
+
+![nmap_advanced_results.PNG](/uploads/nmap_advanced_results.PNG "nmap_advanced_results")
+
+Once the scan finishes we see its Drupal 7.x
+
+Now we run Droopescan to probe at it a bit. We can also run nikto while Droopescan is doing its thing. While all thats running, we poke around manually at robots.txt and find /admin and a few other interesting things but no access error when trying them.
+
+It took a little while but the droopescan results are back and we narrowed it down to versions ( 7.22 -> 7.26 ).
+
+![droopescan_results.PNG](/uploads/droopescan_results.PNG "droopescan_results")
+
+
+
+
+
+
+
+
+
+
+
