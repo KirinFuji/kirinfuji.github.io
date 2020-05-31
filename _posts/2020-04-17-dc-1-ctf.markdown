@@ -11,6 +11,8 @@ description: Walkthrough of DC-1 Vulnerable VM
 blog_category: Security
 ---
 
+# DC-1 CTF
+
 DC-1 Is a capture the flag vulnerable VM.
 
 Download the VM. Link in resources. 
@@ -18,7 +20,7 @@ Download the VM. Link in resources.
 Resources:
 https://www.vulnhub.com/entry/dc-1,292/
 
-### Troubleshooting VM
+## Troubleshooting VM
 
 Tried to import it into VirtualBox first it will complain about the network card when you try to start it. Open settings and set your network card and set it to bridged.
 
@@ -28,7 +30,7 @@ And there we go its running.
 
 ![Proof_Running.PNG](/uploads/Proof_Running.PNG "Proof_Running")
 
-### Enumeration
+# Enumeration
 
 Run the following to discover local devices:
     netdiscover -c 20 -r 10.0.0.0/24
@@ -54,6 +56,11 @@ Now we run Droopescan to probe at it a bit. We can also run nikto while Droopesc
 It took a little while but the droopescan results are back and we narrowed it down to versions ( 7.22 -> 7.26 ).
 
 ![droopescan_results.PNG](/uploads/droopescan_results.PNG "droopescan_results")
+
+Quick searchsploit and... Its a Drupalgeddon VM!
+
+
+
 
 
 
