@@ -1,12 +1,14 @@
 ---
 title: Binary Data and Programming
-date: 2020-10-16 15:24:00 -07:00
+date: 2020-04-15 15:24:00 -07:00
 categories:
 - Security
 tags:
 - Reverse Engineering
 - Python
+description: Yep its another encoding and binary data explanation.
 blog_category: Security
+Field name: 
 ---
 
 ## Use case in high level programming.
