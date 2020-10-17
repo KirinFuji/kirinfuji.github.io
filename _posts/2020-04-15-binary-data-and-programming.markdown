@@ -11,14 +11,6 @@ blog_category: Security
 Field name: 
 ---
 
-## Use case in high level programming.
-
-Often times new programmers jump right into a high level language without really understanding the underlying systems that allow the language to do so much more with so much less.
-
-You may never be in the situation were you have to work with encoding and binary data. Typical situations would be network and protocol analysis, character encoding, file systems, and so much more.
-
-There are many robust systems in place already that handle all this without us even thinking about it.
-
 ## Understanding bytes and bits  
 
 A byte is 8 bits, and a bit is a switch that can be either a 0 or a 1 which means each byte has 256 unique combinations of "switch patterns". The basis of an encoding format is to get all the symbols you can represented by as few bytes as possible. Obviously if you break out of English there is many more symbols out there so some encoding schemes eventually start using 2 bytes for a character which jumps to a staggering 65536 unique "switch patterns".
