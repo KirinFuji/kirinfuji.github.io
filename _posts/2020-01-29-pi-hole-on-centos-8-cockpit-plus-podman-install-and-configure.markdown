@@ -16,7 +16,7 @@ blog_category: Quick Install Guides
 
 ### Introduction
 
-I went to setup an Avorion game server on my CentOS 7 box only to find some issues with missing C++ libraries and CentOS 7 reporting everything is installed and up-to-date. Apparently its time to upgrade to CentOS 8. Tried to upgrade to CentOS 8 and found no supported methods or any that worked. Decided to reformat only to find they completely went the other direction and discourage using docker in lieu of podman+buildah (my containers were docker-compose containers).
+One day I tried to upgrade from CentOS 7 to CentOS 8 and found no supported methods or any that worked. Decided to reformat only to find they completely went the other direction and discourage using docker in lieu of podman+buildah (my containers were docker-compose containers).
 
 ### Walkthrough
 
