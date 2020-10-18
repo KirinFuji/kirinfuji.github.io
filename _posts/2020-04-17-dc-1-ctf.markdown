@@ -111,12 +111,10 @@ Checking the /home directory shows `flag4`.
 
 ![flag4.PNG](/uploads/flag4.PNG "flag4")
 
-I was searching for stuff with find and noticed it was reveling root level files.
+I was searching for stuff with find and noticed it was revealing root level files.
 
 ![find has setuid.PNG](/uploads/find%20has%20setuid.PNG)
 
 So I ended up escalating with find set uid to get `thefinalflag.txt`. Could have also stolen the `/etc/shadow` and used john to see if it could crack it.
 
 ![Final_escalation_root.PNG](/uploads/Final_escalation_root.PNG "Final_escalation_root")
-
-Now time to work on DC-2 !
