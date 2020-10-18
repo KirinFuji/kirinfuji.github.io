@@ -9,7 +9,6 @@ tags:
 author: Kirin
 description: Walkthrough of DC-1 Vulnerable VM
 blog_category: Security
-unlisted: true
 ---
 
 # DC-1 CTF
