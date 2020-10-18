@@ -1,6 +1,6 @@
 ---
 title: Binary Data and Programming
-date: 2020-04-15 15:24:00 -07:00
+date: 2020-09-17 15:24:00 -07:00
 categories:
 - Security
 tags:
