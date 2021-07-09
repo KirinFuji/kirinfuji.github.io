@@ -37,5 +37,7 @@ The final malicious domain and server are both hosted in a country where filing 
 
 Put it all together and they can basically do whatever they want and get away with it.
 
-In my personal opinion, the service providers should want to remove content being used as part of a criminal operation but they don't seem to care and only care.
+In my personal opinion, the service providers should want to remove content being used as part of a criminal operation but they don't seem to care.
+
+
 
